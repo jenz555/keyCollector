@@ -1,4 +1,5 @@
 node_modules/
+.vscode/
 assets/images/PSDs
 assets/images/content
 assets/images/**/*.tiff

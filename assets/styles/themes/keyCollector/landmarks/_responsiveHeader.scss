@@ -3,9 +3,7 @@
 // // -----------------------------------
 
 .responsive__header {
-    //@include radial-gradient($blue-8,$blue-9);
-    background-color: $dark-blue;
-    height: 80px;
+    background: $dark-blue;
 }
 
 .responsive__header--divider {
@@ -14,16 +12,4 @@
 
 .hamburger__container {
     border: none;
-    left: 10px;
-}
-
-
-
-@media only screen and (max-width: $breakpoint-medium) {
-    .responsive__header {
-
-        height: 50px;
-    }
-  
-    
 }
