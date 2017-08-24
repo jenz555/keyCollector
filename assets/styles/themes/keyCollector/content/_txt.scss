@@ -62,12 +62,22 @@
     color: $violet-2;
 }
 
+.txt--color-yellow {
+    color: $yellow-2;
+}
+
+h2 {
+    font-size: 1.425rem;
+}
+
 @media only screen and (max-width: $breakpoint-medium) {
     .txt--size-36 {
         font-size: 1.75rem;
     }
     h2 {
         font-size: 1.25rem;
+        line-height: 1.3;
+
     }
     h1 {
       font-size: 1.5rem;
