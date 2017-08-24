@@ -4371,6 +4371,9 @@ dl dt {
     height: 40px;
     margin-top: 0.3rem; } }
 
+.fa-inverse {
+  color: #ffffff; }
+
 .img--vcenter {
   display: flex;
   justify-content: center;
@@ -5390,7 +5393,7 @@ h2 {
   background-image: url("../images/exploreApp_bkg.jpg"); }
 
 .box--blue {
-  background-color: #2a8df2; }
+  background-color: #0065b1; }
 
 .card {
   -webkit-border-radius: 3px;
@@ -7973,6 +7976,9 @@ h2 {
   margin: 0;
   overflow: visible;
   clip: auto; }
+
+.fa-inverse {
+  color: #fff; }
 
 /*
  * @example"
