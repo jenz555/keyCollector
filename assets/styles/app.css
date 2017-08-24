@@ -3867,6 +3867,12 @@ this cell in mobile view*/
 .padding--x3 {
   padding: 3rem; }
 
+.padding--t0 {
+  padding-top: 0rem; }
+
+.padding--t1 {
+  padding-top: 1rem; }
+
 .margin--x1 {
   margin: 1rem; }
 
@@ -4370,6 +4376,12 @@ dl dt {
   width: 70px;
   height: 70px;
   margin-top: 0.3rem; }
+
+@media only screen and (max-width: 48em) {
+  .icon--logo {
+    width: 40px;
+    height: 40px;
+    margin-top: 0.3rem; } }
 
 .img--vcenter {
   display: flex;
@@ -5044,12 +5056,13 @@ input.option__input[type=checkbox]:disabled:checked + input[type='hidden'] + .op
 .txt--color-violet--2 {
   color: #7307a0; }
 
-@media (max-width: 48em) {
+@media only screen and (max-width: 48em) {
   .txt--size-36 {
     font-size: 1.75rem; }
   h2 {
     font-size: 1.25rem; }
   h1 {
+    font-size: 1.5rem;
     padding-top: .25rem; } }
 
 @media only screen and (max-width: 992px) {
@@ -5084,13 +5097,19 @@ input.option__input[type=checkbox]:disabled:checked + input[type='hidden'] + .op
     font-family: "Montserrat-Light", Arial, Helvectica, sans-serif; }
 
 .responsive__header {
-  background-color: #0065b1; }
+  background-color: #003e7b;
+  height: 80px; }
 
 .responsive__header--divider {
   border-right: 1px solid #55c8e8; }
 
 .hamburger__container {
-  border: 1px solid #2a8df2; }
+  border: none;
+  left: 10px; }
+
+@media only screen and (max-width: 48em) {
+  .responsive__header {
+    height: 50px; } }
 
 .nav {
   font-family: "Montserrat-Regular", Arial, Helvectica, sans-serif; }
@@ -5113,7 +5132,6 @@ input.option__input[type=checkbox]:disabled:checked + input[type='hidden'] + .op
   width: 100%;
   width: 100%;
   background-image: url(../images/appBackground.png);
-  height: 300px;
   padding: 1rem 0; }
 
 .jumbotron--hero--container {
@@ -5211,6 +5229,28 @@ input.option__input[type=checkbox]:disabled:checked + input[type='hidden'] + .op
   to {
     opacity: 1;
     transform: none; } }
+
+@media only screen and (max-width: 48em) {
+  .jumbotron {
+    padding-bottom: 0; }
+  .jumbotron--heroMan--tablet {
+    display: table;
+    margin: 0 auto;
+    text-align: center; }
+    .jumbotron--heroMan--tablet img {
+      width: 200px;
+      display: table-cell; } }
+
+@media only screen and (max-width: 463px) {
+  .jumbotron--content {
+    font-size: 1rem; }
+  .jumbotron--heroMan--tablet {
+    display: table;
+    margin: 0 auto;
+    text-align: center; }
+    .jumbotron--heroMan--tablet img {
+      width: 150px;
+      display: table-cell; } }
 
 .hero {
   width: 100%;
@@ -5328,9 +5368,6 @@ input.option__input[type=checkbox]:disabled:checked + input[type='hidden'] + .op
     padding-bottom: 3vW; } }
 
 @media only screen and (max-width: 48em) {
-  .hero--tablet {
-    width: 60%;
-    margin: 0 auto; }
   .hero {
     height: auto; } }
 

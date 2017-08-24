@@ -3,7 +3,7 @@
     //position: relative;
     width: 100%;
     background-image: url(../images/appBackground.png);
-    height: 300px;
+    //height: 300px;
     padding: 1rem 0;
 }
 
@@ -54,6 +54,47 @@
         }
     }
     @include animationDelay(2.0s);
+}
+
+
+
+@media only screen and (max-width: $breakpoint-medium) {
+    .jumbotron {
+        padding-bottom:0;
+    }
+    .jumbotron--content {
+
+    }
+    .jumbotron--heroMan--tablet {
+       display: table;
+        margin: 0 auto;
+        text-align: center;
+        img {
+            width: 200px;
+            display: table-cell;
+        }
+    }
+  
+    
+}
+
+@media only screen and (max-width: 463px) {
+
+    .jumbotron--content {
+            font-size: 1rem;
+    }
+  
+    .jumbotron--heroMan--tablet {
+       display: table;
+        margin: 0 auto;
+        text-align: center;
+        img {
+            width: 150px;
+            display: table-cell;
+        }
+    }
+  
+    
 }
 
 
@@ -133,10 +174,10 @@
 }
 
 @media only screen and (max-width: $breakpoint-medium) {
-    .hero--tablet {
-        width: 60%;
-        margin: 0 auto;
-    }
+    // .hero--tablet {
+    //     width: 60%;
+    //     margin: 0 auto;
+    // }
     .hero {
         height: auto;
     }

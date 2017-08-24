@@ -62,7 +62,7 @@
     color: $violet-2;
 }
 
-@media (max-width: $breakpoint-medium) {
+@media only screen and (max-width: $breakpoint-medium) {
     .txt--size-36 {
         font-size: 1.75rem;
     }
@@ -70,6 +70,7 @@
         font-size: 1.25rem;
     }
     h1 {
+      font-size: 1.5rem;
       padding-top: .25rem;
     }
 }
