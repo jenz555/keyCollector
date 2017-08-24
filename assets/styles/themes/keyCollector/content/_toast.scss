@@ -1,0 +1,20 @@
+.c-toast {
+  background: rgba(0,108,104,0.95);
+  @include border-radius(2px);
+
+  &--confirmation {
+    background-color: $green-1;
+  }
+
+  &--warning {
+    background-color: $orange-3;
+  }
+
+  &--error {
+    background-color: $red-1;
+  }
+
+  &__content {
+    font-family: $font-brand-light;
+  }
+}

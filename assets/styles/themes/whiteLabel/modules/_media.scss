@@ -1,0 +1,32 @@
+//----------------------------------------------------
+// Media
+//----------------------------------------------------
+
+/*
+ *  @example"
+    <div class="media">
+	    <div class="media__media">
+	        <img src="http://placehold.it/642x160&text=Image" alt="Example Image (Optional)" class="img" />
+	    </div>
+	    <div class="media__bd">
+	        <strong>Media</strong><br />
+	        <p>Magnus es, domine, et laudabilis valde: magna virtus tua, et sapientiae tuae non est numerus. et laudare te vult homo, aliqua portio creaturae tuae, et homo circumferens mortalitem suam, circumferens testimonium peccati sui et testimonium, quia superbis.</p>
+	    </div>
+	</div>
+
+	More info available: http://ux.allstate.com/ux/Allstate-Style-Guide/#/components/media
+ *
+ */
+
+.media {
+    @include clearfix();
+}
+
+.media__media {
+    float: left;
+    padding-right: 1rem;
+}
+
+.media__bd {
+    overflow: hidden;
+}

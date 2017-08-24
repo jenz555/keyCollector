@@ -1,0 +1,52 @@
+.c-toaster {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  right: 1rem;
+  width: auto;
+  z-index: 2000;
+  z-index: $zIndex-10;
+
+  &__top {
+    bottom: auto;
+    top: 1rem;
+  }
+
+  .c-toast {
+    box-shadow: -2px 2px 4px rgba(0,0,0,0.3);
+  }
+}
+
+.c-toast {
+  background: $gray-6;
+  margin-bottom: 0.625rem;
+  position: relative;
+
+
+  &__content {
+    color: $white;
+  	padding: 1rem 2.5rem 1rem 1.5rem;
+  }
+
+  &__close {
+    background: transparent;
+    border: 0;
+    color: $white;
+    font-size: 1.25rem;
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    @include transform(rotate(45deg));
+
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-medium) {
+  .c-toaster {
+    left: auto;
+    width: 17.5rem;
+  }
+}

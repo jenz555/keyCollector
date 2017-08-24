@@ -1,0 +1,13 @@
+//----------------------------------------------------
+// Section
+//----------------------------------------------------
+
+.section {
+	margin-bottom: 2.1875rem;
+	padding-bottom: 0.9375rem;
+	@include borderBox;
+}
+
+.section--divider {
+    border-bottom: 1px solid $gray-3;
+}

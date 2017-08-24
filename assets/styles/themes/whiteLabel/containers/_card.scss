@@ -1,0 +1,74 @@
+// ------------------------
+//  INFORMATION
+// ------------------------
+// Important: Do not change these core files. Any changes should be
+//            added to a theme file. Example '/themes/_card.scss'
+//
+// Description: Cards are blocks of grouped content (usually repeatable and contained within a grid or block)
+//              that contains a card header (card--header), card body (card--bd) and a card footer (card--ft).
+//              In the example below, the card is contained inside of a block layout to illustrate the size it can take.
+//
+//
+// ------------------------
+//  EXAMPLES
+// ------------------------
+//
+//    <div class="card card--framed">
+//      <div class="card__header">
+//        Card Header
+//      </div>
+//      <div class="card__body">
+//        Card content...
+//      </div>
+//      <div class="card__footer">
+//        <a href="">Learn More</a>
+//      </div>
+//    </div>
+//
+//    http://ux.allstate.com/ux/Allstate-Style-Guide/#/components/cards
+//
+// ------------------------
+//  APPENDIX
+// ------------------------
+//
+//
+//
+
+.card {
+  background-color: $white;
+  overflow: hidden;
+}
+
+.card--framed {
+  border: 2px solid $gray-3;
+}
+
+.card__header {
+  padding: 1rem;
+}
+
+.card__footer {
+  padding: 1rem;
+}
+
+.card__header--dusty,
+.card__footer--dusty {
+  background-color: $gray-1;
+}
+
+.card__header--trim {
+  border-bottom: 1px solid $gray-3;
+}
+
+.card__body {
+  padding: 1rem;
+}
+
+.card__body--bordered {
+  border-bottom: 1px solid $gray-3;
+  border-top: 1px solid $gray-3;
+}
+
+.card__body--flush {
+  padding: 0;
+}

@@ -1,0 +1,94 @@
+// Removed .txt class since it was not really needed.
+
+// Text Sizes
+.txt--size-36 {
+	font-size: 2.25rem;
+}
+
+.txt--size-28 {
+	font-size: 1.75rem;
+}
+
+.txt--size-24 {
+	font-size: 1.5rem;
+}
+
+.txt--size-20 {
+	font-size: 1.25rem;
+}
+
+.txt--size-18 {
+	font-size: 1.125rem;
+}
+
+.txt--size-16 {
+	font-size: 1rem;
+}
+
+.txt--size-14 {
+	font-size: 0.875rem;
+}
+
+.txt--size-12 {
+	font-size: 0.75rem;
+}
+
+// Text Weights
+.txt--weight-light,
+.txt--weight-medium {
+	font-weight: normal;
+}
+
+.txt--weight-bold,
+.txt--weight-black {
+	font-weight: bold;
+}
+
+// Text style
+.txt--style-italic {
+	font-style: italic;
+}
+
+.txt--style-uppercase {
+	text-transform: uppercase;
+}
+
+.txt--style-lowercase {
+	text-transform: lowercase;
+}
+
+.txt--style-capitalize {
+	text-transform: capitalize;
+}
+
+// Text Fonts
+.txt--font-arial {
+	font-family: $font-arial;
+}
+
+// Text Decoration
+.txt--decoration-underline {
+	text-decoration: underline;
+}
+
+.txt--decoration-strike {
+	text-decoration: line-through;
+}
+
+// Text Alignment
+.txt--align-left {
+  text-align: left;
+}
+
+.txt--align-center {
+  text-align: center;
+}
+
+.txt--align-right {
+  text-align: right;
+}
+
+// Text Colors
+.txt--color-white {
+  color: $white;
+}

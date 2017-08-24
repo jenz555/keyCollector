@@ -1,0 +1,26 @@
+//----------------------------------------------------
+// Hint
+//----------------------------------------------------
+
+/*
+ *  @example"
+    
+
+    More info available: http://ux.allstate.com/ux/Allstate-Style-Guide/#/
+ *
+ */
+
+.hint {
+	font-size: 0.875rem;
+    line-height: 1.2;
+    color: $gray-5;
+    margin-top: 0.25rem;
+}
+
+.hint--hasError {
+    color: $red-1;
+}
+
+.hint--hasSuccess {
+    color: $green-1;
+}

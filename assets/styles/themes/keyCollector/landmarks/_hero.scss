@@ -1,0 +1,83 @@
+.hero {
+    width: 100%;
+    position: relative;
+    background-image: url(../images/appBackground.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    // @include animation(colorChange 5.0s forwards);
+    // @include keyframes(colorChange) {
+    //     from {
+    //         background-color: $violet-1;
+    //     }
+    //     to {
+    //         background-color: $blue-2;
+    //     }
+    // }
+    z-index: $zIndex-2;
+}
+
+.hero__content {
+    width: 60%;
+}
+
+.heroMan {
+    position: absolute;
+    opacity: 0;
+    background-image: url(../images/heroMan.png);
+    width: 30%;
+    bottom: 0;
+    right: 100px;
+    z-index: $zIndex-2;
+    @include animation(fadeInLeft 2.0s forwards);
+    @include keyframes(fadeInLeft) {
+        from {
+            opacity: 0;
+            transform: translate3d(200%, 0, 0);
+        }
+        to {
+            opacity: 1;
+            transform: none;
+        }
+    }
+}
+
+.heroManKey {
+    position: absolute;
+    opacity: 0;
+    background-image: url(../images/heroManKey.png);
+    width: 30%;
+    bottom: 0;
+    right: 100px;
+    z-index: $zIndex-3;
+    @include animation(fadeIn 2.0s forwards);
+    @include keyframes(fadeIn) {
+        from {
+            opacity: 0;
+            transform: none;
+        }
+        to {
+            opacity: 1;
+            transform: none;
+        }
+    }
+    @include animationDelay(2.0s);
+}
+
+@media only screen and (min-width: $breakpoint-medium) {
+    .vert-adjust {
+        padding-top: 3vW;
+        padding-bottom: 3vW;
+    }
+}
+
+@media only screen and (max-width: $breakpoint-medium) {
+    .hero--tablet {
+        width: 60%;
+        margin: 0 auto;
+    }
+    .hero {
+        height: auto;
+    }
+}

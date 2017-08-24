@@ -1,0 +1,103 @@
+// ------------------------
+//  INFORMATION
+// ------------------------
+// Important: Do not change these core files. Any changes should be
+//            added to a theme file. Example '/themes/_utilities.scss'
+//
+// Description: Helper classes
+//
+//
+// ------------------------
+//  EXAMPLES
+// ------------------------
+//
+// <div class="corners__rounded--all--small"></div>
+//
+// http://ux.allstate.com/ux/Allstate-Style-Guide/#/components/helpers
+//
+//
+// ------------------------
+//  APPENDIX
+// ------------------------
+//
+// No developer specific notes
+//
+//
+
+//-----------------------------------------------------------------------------
+// Apply border to element
+//-----------------------------------------------------------------------------
+.border {
+    border: 1px solid $gray-6;
+}
+
+.border--thick {
+    border: 2px solid $gray-6;
+}
+
+
+//-----------------------------------------------------------------------------
+// Apply padding to element
+//-----------------------------------------------------------------------------
+.padding--x1 {
+    padding: 1rem;
+    //.pxsToRems(padding, (@base--spacingUnit * 8));
+}
+
+.padding--x2 {
+    padding: 2rem;
+    //.pxsToRems(padding, (@base--spacingUnit * 8));
+}
+
+.padding--x3 {
+    padding: 3rem;
+    //.pxsToRems(padding, (@base--spacingUnit * 12));
+}
+
+
+//-----------------------------------------------------------------------------
+// Apply a margin to element
+//-----------------------------------------------------------------------------
+.margin--x1 {
+    margin: 1rem;
+    //.pxsToRems(margin, (@base--spacingUnit * 4));
+}
+
+.margin--x2 {
+    margin: 2rem;
+    //.pxsToRems(margin, (@base--spacingUnit * 8));
+}
+
+.margin--x3 {
+    margin: 3rem;
+    //.pxsToRems(margin, (@base--spacingUnit * 12));
+}
+
+
+//-----------------------------------------------------------------------------
+// Apply rounded corners to element
+//-----------------------------------------------------------------------------
+
+.round {
+    @include border-radius(50%);
+}
+
+.cornersRounded {
+    @include border-radius(4px);
+}
+
+.cornersRoundedTop {
+	@include border-radius(4px 4px 0 0);
+}
+
+.cornersRoundedBottom {
+	@include border-radius(0 0 4px 4px);
+}
+
+.cornersRoundedLeft {
+	@include border-radius(4px 0 0 4px);
+}
+
+.cornersRoundedRight {
+	@include border-radius(0 4px 4px 0);
+}

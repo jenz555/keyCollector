@@ -1,0 +1,62 @@
+// ------------------------
+//  INFORMATION
+// ------------------------
+// Important: Do not change these core files. Any changes should be
+//            added to a theme file. Example '/themes/_box.scss'
+//
+// Description: Boxes are containers that have different inner padding for each usage.
+//
+//
+// ------------------------
+//  EXAMPLES
+// ------------------------
+//
+//    <div class="box">
+//        This is a normal box with ~16px of padding inside.
+//    </div>
+//
+//    <div class="box box--x2">
+//        This is a normal box with ~32px of padding on the top and bottom, but ~16px on the sides.
+//    </div>
+//
+//    <div class="box box--x3">
+//        This is a normal box with ~48px of padding on the top and bottom, but ~16px on the sides.
+//    </div>
+//
+//
+// ------------------------
+//  APPENDIX
+// ------------------------
+//
+//
+//
+
+
+.box {
+    padding: 1rem;
+}
+
+.box--x2 {
+    padding: 2rem;
+}
+
+.box--x3 {
+    padding: 3rem;
+}
+
+.box--dusty {
+    background: $gray-1;
+}
+
+.box--white {
+    background: $white;
+}
+
+.box--framed {
+    border: 1px solid $gray-6;
+}
+
+.box__hd {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}

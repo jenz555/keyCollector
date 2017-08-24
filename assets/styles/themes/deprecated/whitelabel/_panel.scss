@@ -1,0 +1,80 @@
+// ------------------------
+//  INFORMATION
+// ------------------------
+// Important: Do not change these core files. Any changes should be 
+//            added to a theme file. Example '/themes/_panel.scss' 
+// 
+// Description: Panels are typically containers with a background color that have an icon and supportive messaging.
+//              Such panels include an alert panel, which contains an error notification summary, as well as an
+//              informational panel which includes detailed information about supporting content. 
+//
+//
+// ------------------------ 
+//  EXAMPLES
+// ------------------------
+//
+//<div class="panel panel--hasAlert">
+//    <div class="media">
+//        <div class="media__media">
+//            <i class="icon icon--error"></i>
+//        </div>
+//        <div class="media__bd">
+//            <span class="hdg hdg--bold">Sorry, but 3 errors have been made</span>
+//            <ul>
+//                <li>Error detail line 1</li>
+//                <li>Error detail line 2</li>
+//                <li>Error detail line 3</li>
+//            </ul>
+//            <ul>
+//                <li>
+//                    <a href="#" class="txt--underline">Error Link 1</a>
+//                </li>
+//                <li>
+//                    <a href="#" class="txt--underline">Error Link 2</a>
+//                </li>
+//                <li>
+//                    <a href="#" class="txt--underline">Error Link 3</a>
+//                </li>
+//            </ul>
+//        </div>
+//    </div>
+//</div>
+//
+//      http://ux.allstate.com/ux/Allstate-Style-Guide/#/components/panels
+// ------------------------
+//  APPENDIX
+// ------------------------
+// 
+//
+//
+
+$tinted: #EBF5D1;
+
+.panel {
+    padding: 1.25rem;
+    @include clearfix();
+    position: relative;
+}
+
+.panel--hasAlert {
+    border-color: $orange-2;
+    background-color: $orange-2;
+}
+
+.panel--hasConfirm {
+    border-color: $tinted;
+    background-color: $tinted;
+}
+
+
+//----------------------------------------------------
+// Media Queries
+//----------------------------------------------------
+
+@media (min-width: $breakpoint-medium) {
+    
+	.panel {
+        margin: 1.25rem 0; 
+    }
+
+}

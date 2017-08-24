@@ -1,0 +1,82 @@
+@mixin progressLabel {
+  content: attr(label);
+  white-space: nowrap;
+  @include pxsToRems(font-size, 14px);
+}
+
+.c-progress-bar {
+  align-items: center;
+  @include display-flex();
+
+  &.has-label {
+    &:after {
+      display: inline-block;
+      @include progressLabel;
+      @include pxsToRems(margin-left, 5px);
+    }
+  }
+
+  &.has-label-left {
+    @include flex-direction(row-reverse);
+
+    &:after {
+      display: inline-block;
+      @include progressLabel;
+      @include pxsToRems(margin-right, 5px);
+    }
+  }
+
+  &.has-label-top {
+    @include flex-direction(column);
+
+    &:before {
+      display: block;
+      text-align: center;
+      @include progressLabel;
+      @include pxsToRems(margin-bottom, 2px);
+    }
+  }
+
+  &.has-label-bottom {
+    @include flex-direction(column);
+
+    &:after {
+      display: block;
+      text-align: center;
+      @include progressLabel;
+      @include pxsToRems(margin-top, 2px);
+    }
+  }
+
+  progress {
+    background: $gray-2;
+    border: 0;
+    width: 100%;
+    @include appearance();
+    @include pxsToRems(border-radius, 3px);
+    @include pxsToRems(height, 16px);
+
+    &::-moz-progress-bar {
+      background: $gray-5;
+      @include pxsToRems(border-top-left-radius, 3px);
+      @include pxsToRems(border-bottom-left-radius, 3px);
+    }
+
+    &::-webkit-progress-bar {
+      background: $gray-2;
+      @include pxsToRems(border-radius, 3px);
+    }
+
+    &::-webkit-progress-value {
+      background: $gray-5;
+      @include pxsToRems(border-top-left-radius, 3px);
+      @include pxsToRems(border-bottom-left-radius, 3px);
+    }
+
+    &::-ms-fill {
+      background: $gray-5;
+      @include pxsToRems(border-top-left-radius, 3px);
+      @include pxsToRems(border-bottom-left-radius, 3px);
+    }
+  }
+}

@@ -1,0 +1,100 @@
+.affix {
+    width:100%;
+    display:table;
+}
+
+.affix__icon {
+    padding-right: 0.75rem;
+    vertical-align:middle;
+    display:table-cell;
+}
+
+.affix__input {
+    width:100%;
+    background:$white;
+    display:table-cell;
+}
+
+.affix__icon--top {
+    vertical-align:top;
+}
+
+.affix__icon--bottom {
+    vertical-align:bottom;
+}
+
+.affix--inside {
+    height: $base-inputHeight;
+    position:relative;
+}
+
+.affix--inside > .affix__icon,
+.affix--inside--post > .affix__icon {
+    background:$gray-2;
+    padding: 0 0.5rem;
+    line-height: 2.5rem;
+    position:absolute;
+    top:1px;
+    bottom:1px;
+    z-index:$zIndex-1;
+}
+
+.affix--inside > .affix__icon {
+    left:1px;
+    border-right:1px solid $gray-4;
+}
+
+.affix--inside > .affix__input > .input {
+    padding-left: 2.5rem;
+}
+
+.affix--post > .affix__icon {
+    padding-right:0;
+    padding-left: 0.5rem;
+}
+
+.affix--inside--post {
+    position:relative;
+}
+
+.affix--inside > .input {
+  border: 1px solid $gray-4;
+}
+
+.affix--inside--post > .affix__icon {
+    right:1px;
+    border-left:1px solid $gray-4;
+}
+
+.affix--inside--post > .affix__input > .input {
+    padding-right: 2.5rem;
+}
+
+//Error States
+.affix--hasError > .affix__input > .input {
+    border: 2px solid $color-error;
+}
+
+
+.affix--inside.affix--hasError > .affix__icon,
+.affix--inside--post.affix--hasError > .affix__icon{
+    background: $color-error;
+    color:$white;
+    top:1px;
+    bottom:1px;
+}
+
+.affix--inside.affix--hasError > .affix__icon {
+    left:1px;
+}
+
+.affix--inside--post > .affix__icon {
+    right:1px;
+}
+
+//Disabled States
+.affix__input > .input[disabled]{
+    background:$gray-1;
+    color:$gray-4;
+    opacity: 1;
+}

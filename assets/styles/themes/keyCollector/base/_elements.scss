@@ -1,0 +1,46 @@
+// ------------------------
+//  INFORMATION
+// ------------------------
+// Important: Do not change these core files. Any changes should be
+//            added to a theme file. Example '/themes/_base.scss'
+//
+// Description: Our base HTML elements.
+//
+//
+// ------------------------
+//  APPENDIX
+// ------------------------
+//
+// 1. Enables kerning and optional ligatures.
+// 2. Disables subpixel-rendering and smooths the font on the level of the pixel
+//
+
+
+body {
+  color: $gray-6;
+  font-family: $font-brand;
+}
+
+a {
+	color: $blue-1;
+}
+
+a:visited {
+    color:$violet-2;
+}
+
+i,
+em {
+    font-family: $font-brand-italic;
+}
+
+strong,
+b {
+    font-family: $font-brand-bold;
+    font-weight: normal;
+}
+
+
+dl dt {
+	font-weight: $font-bold;
+}

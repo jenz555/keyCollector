@@ -1,0 +1,41 @@
+//----------------------------------------------------
+// alerts
+//----------------------------------------------------
+
+/*
+ *  @example"
+    <label for="textFieldConfirm" class="label">Text Field</label>
+	<input id="textFieldConfirm" class="input input--txt input--hasSuccess" type="text">
+	<div class="form__notice">
+	    <span class="form__message form__message--hasSuccess">Inline Confirmation</span>
+	</div>
+
+    More info available: http://ux.allstate.com/ux/Allstate-Style-Guide/#/components/alerts
+ *
+ */
+
+.form__message {
+    font-family: $font-sans;
+    font-size: 0.875rem;
+    color: $gray-3;
+}
+
+.form__message--italic {
+    font-style: italic;
+}
+
+.form__message--hasError {
+    color: $red-1;
+}
+
+.form__message--hasSuccess {
+    color: $green-3;
+}
+
+.form__message--bright {
+    color: $blue-3;
+}
+
+.form__message--hint {
+    color: $gray-3;
+}

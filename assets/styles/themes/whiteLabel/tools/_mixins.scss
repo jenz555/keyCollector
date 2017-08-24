@@ -1,0 +1,218 @@
+// ------------------------
+//  INFORMATION
+// ------------------------
+// Important: Do not change these core files. Any changes should be 
+//            added to a theme file. Example '/themes/_mixins.scss' 
+// 
+// Description: This contains our global mixins used throughout our core ui kit.
+//              Repeated code should be added to a mixin. i.e. vendor prefix classes.
+//
+//
+// ------------------------ 
+//  EXAMPLES
+// ------------------------
+//
+// .className {
+//      @include vr()
+// }
+//
+
+@mixin vr($multiplier: 1) {
+    margin-bottom: ($base-vr * $multiplier);
+    //margin-bottom: unit($base-vr * $multiplier);
+    //margin-bottom: unit(($base-vr / ($root-fontSize / 1px)) * $multiplier);
+}
+
+
+// Box sizing
+@mixin boxSizing($property: border-box) {
+  -webkit-box-sizing: $property;
+     -moz-box-sizing: $property;
+      -ms-box-sizing: $property;
+          box-sizing: $property;
+}
+
+// Content box
+@mixin contentBox() {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+// Border Box
+@mixin borderBox() {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     -ms-box-sizing:  border-box;
+          box-sizing: border-box;
+}
+
+// Clearfix
+@mixin clearfix() {
+  &:before,
+  &:after {
+      content: " ";
+      display: table;
+  }
+  &:after {
+      clear: both;
+  }
+}
+
+//-----------------------------------------------------------------------------
+// Screen Reader Visible (not visible in browser window)
+// http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+//-----------------------------------------------------------------------------
+
+// Screen reader visible
+@mixin scrnRdrVisible() {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+// appearance
+@mixin appearance() {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+// User select
+@mixin userSelect() {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+// Transform
+@mixin transform($value) {
+  -webkit-transform: $value;
+  -moz-transform: $value;
+  -ms-transform: $value;
+  transform: $value;
+}
+	
+// Gradient
+@mixin basicGradient($start-pos, $start-color, $end-pos, $end-color) {
+  background: $start-color;
+  background: -moz-linear-gradient($start-pos,  $start-color 0%, $end-color 100%);
+  background: -webkit-gradient(linear, left $start-pos, left $end-pos, color-stop(0%,$start-color), color-stop(100%,$end-color));
+  background: -webkit-linear-gradient($start-pos,  $start-color 0%,$end-color 100%);
+  background: -o-linear-gradient($start-pos,  $start-color 0%,$end-color 100%);
+  background: -ms-linear-gradient($start-pos,  $start-color 0%,$end-color 100%);
+  background: linear-gradient(to $end-pos,  $start-color 0%,$end-color 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$start-color}', endColorstr='#{$end-color}',GradientType=0 );
+}
+
+// Transition
+@mixin transition($property, $duration, $type) {
+    -webkit-transition: $property $duration $type;
+       -moz-transition: $property $duration $type;
+         -o-transition: $property $duration $type;
+        -ms-transition: $property $duration $type;
+            transition: $property $duration $type;
+}
+
+// Drop Shadow
+@mixin dropShadow($shadow: 0 1px 2px rgba(0,0,0,0.1)) {
+  -webkit-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;
+          box-shadow: $shadow;
+}
+
+//Text Shadow
+@mixin textShadow($shadow: 1px 1px 1px rgba(0,0,0,0.1)) {
+  -webkit-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;
+          box-shadow: $shadow;
+}
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};   
+
+}
+
+
+@mixin animationDelay($str) {
+  -webkit-animation-delay: #{$str};
+  -moz-animationn-delay: #{$str};
+  -ms-animationn-delay: #{$str};
+  -o-animationn-delay: #{$str};
+  animation-delay: #{$str};   
+
+}
+
+// Converts Pixels to Rems
+@function parseInt($n) { /* 2 */
+  @return $n / ($n * 0 + 1);
+}
+
+@mixin pxsToRems($property, $values) {
+  $px : (); /* 3 */
+  $rem: (); /* 3 */
+  $base: 16;
+
+  @each $value in $values { /* 4 */
+
+    @if $value == 0 or $value == auto { /* 5 */
+      $px : append($px , $value);
+      $rem: append($rem, $value);
+    }
+
+    @else {
+      $unit: unit($value);    /* 6 */
+      $val: parseInt($value); /* 6 */
+
+      @if $unit == "px" {  /* 7 */
+        $px : append($px,  $value);
+        $rem: append($rem, ($val / 16 + rem));
+      }
+
+      @if $unit == "rem" { /* 7 */
+        $px : append($px,  ($val * 16 + px));
+        $rem: append($rem, $value);
+      }
+    }
+  }
+
+  @if $px == $rem {     /* 8 */
+    #{$property}: $px;  /* 9 */
+  } @else {
+    #{$property}: $px;  /* 9 */
+    #{$property}: $rem; /* 9 */
+  }
+}

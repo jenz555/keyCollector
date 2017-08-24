@@ -1,0 +1,101 @@
+// ------------------------
+//  INFORMATION
+// ------------------------
+// Important: Do not change these core files. Any changes should be
+//            added to a theme file. Example '/themes/containers/_message.scss'
+//
+// Description: Panels are typically containers with a background color that have an icon and supportive messaging.
+//              Such panels include an alert panel, which contains an error notification summary, as well as an
+//              informational panel which includes detailed information about supporting content.
+//
+//
+// ------------------------
+//  EXAMPLES
+// ------------------------
+//
+//<div class="message message--hasAlert">
+//      <div class="message__icon">
+//          <i class="icon icon--error"></i>
+//      </div>
+//      <div class="message__bd">
+//          <span class="hdg hdg--bold">Sorry, but 3 errors have been made</span>
+//          <ul>
+//              <li>Error detail line 1</li>
+//              <li>Error detail line 2</li>
+//              <li>Error detail line 3</li>
+//          </ul>
+//          <ul>
+//              <li>
+//                  <a href="#" class="txt--underline">Error Link 1</a>
+//              </li>
+//              <li>
+//                  <a href="#" class="txt--underline">Error Link 2</a>
+//              </li>
+//              <li>
+//                  <a href="#" class="txt--underline">Error Link 3</a>
+//              </li>
+//          </ul>
+//      </div>
+//</div>
+//
+//      http://ux.allstate.com/ux/AllstateUIToolkit/#/components/message
+// ------------------------
+//  APPENDIX
+// ------------------------
+//
+//
+//
+
+.message {
+    background-color: $white;
+    padding: 1.25rem;
+    border: 1px solid $black;
+    position: relative;
+    @include clearfix();
+}
+
+.message--hasError {
+    border: 1px solid $color-error;
+}
+
+.message__icon-close {
+    color: $gray-4;
+	content: '+';
+    cursor: pointer;
+	display: inline-block;
+	position: absolute;
+	margin: -0.5625rem -0.5rem 0 0;
+    height: 1.563rem;
+    width: 1.563rem;
+    @include transform(rotate(45deg));
+    font-size: 3rem;
+    top: 0;
+    right: 0.5rem;
+    font-style: normal;
+}
+
+
+.message__icon {
+    float:left;
+}
+
+.message__hd {
+    margin-bottom: 1rem; 
+}
+
+.message__bd {
+    overflow:hidden;
+}
+
+
+//----------------------------------------------------
+// Media Queries
+//----------------------------------------------------
+
+@media (min-width: $breakpoint-medium) {
+
+	.message {
+        margin: 1.25rem 0;
+    }
+
+}

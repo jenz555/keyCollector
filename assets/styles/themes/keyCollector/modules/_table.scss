@@ -1,0 +1,74 @@
+//----------------------------------------------------
+// Table
+//----------------------------------------------------
+
+/*
+ *  @example"
+    <div class="table--container">
+      <table class="table" border="1">
+          <thead>
+              <tr>
+                  <td>Year</td>
+                  <td>Age</td>
+                  <td>Premiums</td>
+                  <td>Distributions</td>
+                  <td>Guaranteed<br />Policy Value</td>
+                  <td>Guaranteed<br />Surrender Value</td>
+                  <td>Guaranteed<br />Death Benefit</td>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>2</td>
+                  <td>27</td>
+                  <td>$30.00</td>
+                  <td>$100</td>
+                  <td>$10,000</td>
+                  <td>$10,000</td>
+                  <td>$10,000</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+
+    More info available: http://ux.allstate.com/ux/Allstate-Style-Guide/#/components/tables
+ *
+ */
+
+.table--container {
+  width: 100%;
+}
+
+.table thead tr {
+  background-color: $gray-5;
+}
+
+.table--secondary thead tr {
+  background-color: $gray-1;
+  color: $gray-6;
+}
+
+.table .isTableEdge {
+  @include border-radius(0 4px 0 0);
+}
+
+.table thead th {
+  font-family:$font-brand-bold;
+  font-weight: normal;
+}
+
+.table--deprecated > tbody  tr  {
+  background-color: $orange-1;
+}
+
+.table--responsive td:before {
+  font-family:$font-brand-bold;
+}
+
+.table--responsive td.inlineTitleMobile:before {
+  font-family: $font-brand-bold;
+}
+
+.table--definitionList tbody td:before {
+  font-family: $font-brand-bold;
+}

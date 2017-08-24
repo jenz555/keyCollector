@@ -1,0 +1,77 @@
+
+.txt {
+    font-weight: $font-normal;
+}
+
+.txt--thin {
+    font-weight: $font-light;
+}
+
+.txt--normal {
+    font-weight: $font-normal;
+}
+
+.txt--semibold {
+    font-weight: $font-semiBold;
+}
+
+.txt--bold,
+.txt--thick {
+    font-weight: $font-bold;
+}
+
+.txt--xs {
+    font-size: 0.75rem;
+}
+
+.txt--sm {
+    font-size: 0.875rem;
+}
+
+.txt--lg {
+    font-size: 1.125rem;
+}
+
+.txt--left {
+    text-align: left;
+}
+
+.txt--centered {
+    text-align: center;
+}
+
+.txt--right {
+    text-align: right;
+}
+
+.txt--italic {
+    font-style: italic;
+}
+
+.txt--underline {
+    text-decoration: underline;
+}
+
+.txt--strike {
+    text-decoration: line-through;
+}
+
+.txt--dusty--x4 {
+    color: $gray-4;
+}
+
+.txt--dusty--x5 {
+    color: $gray-5;
+}
+
+.txt--success {
+    color: $green-1;
+}
+
+.txt--inverse {
+    color: $white;
+}
+
+.txt--brand {
+    color: $blue-1;
+}

@@ -1,0 +1,460 @@
+//**********************************************************************************************************
+//	GENERAL NOTE
+//
+//	FLEXBOX WORKS ON THE PRINCIPLE OF A FLEX CONTAINER (PARENT)
+//	AND FLEX ITEMS (CHILDREN).
+//
+//**********************************************************************************************************
+
+//**********************************************************************************************************
+//	FLEX CONTAINER PROPERTIES
+//
+//	THE FOLLOWING PROPERTIES ARE ALL VALID FOR A FLEX CONTAINER (PARENT)
+//
+//**********************************************************************************************************
+
+//---------------------------------------------------------------------------------------------------------
+//
+//	DISPLAY-FLEX
+//
+//	display-flex defines an element as a flex-container
+//
+//	USAGE:
+//	.display-flex **defaults to flex **
+//	.display-flex(@type)
+//
+//	@type :  flex (default) | inline-flex
+//
+//----------------------------------------------------------------------------------------------------------
+
+@mixin display-flex($type: flex){
+
+	 @if $type == flex {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -moz-box;
+		display: -ms-flexbox;
+	}
+
+	@if $type == inline-flex {
+		display: -webkit-inline-box;
+		display: -webkit-inline-flex;
+		display: -moz-inline-box;
+		display: -ms-inline-flexbox;
+	}
+
+	display: $type;
+}
+
+//---------------------------------------------------------------------------------------------------------
+//
+//	FLEX-DIRECTION
+//
+//	flex-direction establishes the main flex axis, either row (horizontal) or column (vertical)
+//
+//	USAGE:
+//	.flex-direction **defaults to row **
+//	.flex-direction(@direction)
+//
+//	$direction :  row (default) | row-reverse | column | column-reverse
+//
+//----------------------------------------------------------------------------------------------------------
+@mixin flex-direction($direction : row){
+
+	@if $direction == row {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-moz-box-orient: horizontal;
+		-moz-box-direction: normal;
+	}
+
+	@if $direction == row-reverse {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: reverse;
+		-moz-box-orient: horizontal;
+		-moz-box-direction: reverse;
+	}
+
+	@if $direction == column {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-moz-box-orient: vertical;
+		-moz-box-direction: normal;
+	}
+
+	@if $direction == column-reverse {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: reverse;
+		-moz-box-orient: vertical;
+		-moz-box-direction: reverse;
+	}
+
+	-webkit-flex-direction: $direction;
+	-ms-flex-direction: $direction;
+	flex-direction: $direction;
+}
+
+//---------------------------------------------------------------------------------------------------------
+//
+//	FLEX-WRAP
+//
+//	Flexbox will always try to fit everything in one row / column.
+//	Flex-wrap allows this default behaviour to be changed with the desired wrapping.
+//
+//	USAGE:
+//	.flex-wrap **defaults to nowrap **
+//	.flex-wrap($wrap)
+//
+//	$wrap :  nowrap (default) | wrap | wrap-reverse
+//
+//----------------------------------------------------------------------------------------------------------
+
+@mixin flex-wrap($wrap : nowrap){
+	-webkit-flex-wrap: $wrap;
+	-ms-flex-wrap: $wrap;
+	flex-wrap: $wrap;
+}
+
+//---------------------------------------------------------------------------------------------------------
+//
+//	FLEX-FLOW
+//
+//	flex-flow is a shorthand combination of flex-direction and flex-wrap.
+//
+//	USAGE:
+//	.flex-flow **defaults to row nowrap **
+//	.flex-flow($direction, $wrap)
+//
+//	$direction :  row (default) | row-reverse | column | column-reverse
+//	$wrap :  nowrap (default) | wrap | wrap-reverse
+//
+//----------------------------------------------------------------------------------------------------------
+
+@mixin flex-flow($direction: row,  $wrap: nowrap){
+	-webkit-flex-flow: $direction  $wrap;
+	-ms-flex-flow: $direction  $wrap;
+	flex-flow: $direction  $wrap;
+}
+
+//---------------------------------------------------------------------------------------------------------
+//
+//	JUSTIFY-CONTENT
+//
+//	justify-content sets the alignment of child items on the main axis (row or column).
+//
+//	USAGE:
+//	.justify-content **defaults to flex-start **
+//	.justify-content($justify)
+//
+//	$justify :  flex-start (default) | flex-end | center | space-between | space-around
+//
+//----------------------------------------------------------------------------------------------------------
+
+@mixin justify-content($justify: flex-start){
+
+	@if $justify == flex-start {
+		-webkit-box-pack: start;
+		-moz-box-pack: start;
+		-ms-flex-pack: start;
+	}
+
+	@if $justify == flex-end {
+		-webkit-box-pack: end;
+		-moz-box-pack: end;
+		-ms-flex-pack: end;
+	}
+
+	@if $justify == center {
+		-webkit-box-pack: $justify;
+		-moz-box-pack: $justify;
+		-ms-flex-pack: $justify;
+	}
+
+	@if $justify == space-between {
+		-webkit-box-pack: justify;
+		-moz-box-pack: justify;
+		-ms-flex-pack: justify;
+	}
+
+	@if $justify == space-around {
+		-ms-flex-pack: distribute;
+	}
+
+	-webkit-justify-content: $justify;
+	justify-content: $justify;
+}
+
+
+//---------------------------------------------------------------------------------------------------------
+//
+//	ALIGN ITEMS
+//
+//	align-items sets the alignment of child items on the cross axis (row or column).
+//	It is easy to think in terms of how we expect something like vertical-align to behave.
+//
+//	USAGE:
+//	.align-items **defaults to flex-start **
+//	.align-items($align)
+//
+//	$align :  flex-start (default) | flex-end | center | baseline | stretch
+//
+//----------------------------------------------------------------------------------------------------------
+
+@mixin align-items($align: flex-start){
+
+	@if $align == flex-start {
+		-webkit-box-align: start;
+		-moz-box-align: start;
+		-ms-flex-align: start;
+	}
+
+	@if $align == flex-end {
+		-webkit-box-align: end;
+		-moz-box-align: end;
+		-ms-flex-align: end;
+	}
+
+	@if $align == center {
+		-webkit-box-align: $align;
+		-moz-box-align: $align;
+		-ms-flex-align: $align;
+	}
+
+	@if $align == baseline {
+		-webkit-box-align: $align;
+		-moz-box-align: $align;
+		-ms-flex-align: $align;
+	}
+
+	@if $align == stretch{
+		-webkit-box-align: $align;
+		-moz-box-align: $align;
+		-ms-flex-align: $align;
+	}
+
+	-webkit-align-items: $align;
+	align-items: $align;
+}
+
+//---------------------------------------------------------------------------------------------------------
+//
+//	ALIGN CONTENT
+//
+//	align-content handles the alignment of a flex containers lines when there is extra space available
+//	in the cross axis.
+//
+//	USAGE:
+//	.align-content **defaults to flex-start **
+//	.align-content($align)
+//
+//	$align :  flex-start (default) | flex-end | center | baseline | stretch (default)
+//
+//----------------------------------------------------------------------------------------------------------
+
+@mixin align-content($align: stretch){
+
+	@if $align == flex-start {
+		-ms-flex-line-pack: start;
+	}
+
+	@if $align == flex-end {
+		-ms-flex-line-pack: end;
+	}
+
+	@if $align == center {
+		-ms-flex-line-pack: $align;
+	}
+
+	@if $align == space-between {
+		-ms-flex-line-pack: justify;
+	}
+
+	@if $align == space-around {
+		-ms-flex-line-pack: distribute;
+	}
+
+	@if $align == stretch {
+		-ms-flex-line-pack: $align;
+	}
+
+	-webkit-align-content: $align;
+	align-content: $align;
+}
+
+//**********************************************************************************************************
+
+//	FLEX ITEM PROPERTIES
+//
+//	THE FOLLOWING PROPERTIES ARE ALL VALID FOR A FLEX ITEM (CHILD)
+//
+//**********************************************************************************************************
+
+//---------------------------------------------------------------------------------------------------------
+//
+//	ORDER
+//
+//	The order property allows control of the order in which a flex item appears within its container.
+//	Flexbox defaults to source order, however setting the order property allows this to be customized.
+//
+//	USAGE:
+//	.order **defaults to 0(zero) **
+//	.order($order)
+//
+//	$order :  integer value
+//
+//----------------------------------------------------------------------------------------------------------
+
+@mixin order($order : 0){
+	-webkit-box-ordinal-group: ($order + 1);
+	-webkit-order: $order;
+	-moz-box-ordinal-group: ($order + 1);
+	-ms-flex-order: $order;
+	order: $order;
+}
+
+//---------------------------------------------------------------------------------------------------------
+//
+//	FLEX-GROW
+//
+//	The flex-grow property sets the ability of a flex item to grow.
+//	It is a unitless proportion.
+//	e.g. if every flex item bar one had a flex-grow property of 1, and the remaining item had
+//	a flex-grow property of 2, that item would take up twice as much space.
+//
+//	USAGE:
+//	.flex-grow **defaults to 0(zero) **
+//	.flex-grow($grow)
+//
+//	$grow :  integer value
+//
+//----------------------------------------------------------------------------------------------------------
+
+@mixin flex-grow($grow : 0){
+	-webkit-box-flex: $grow;
+	-webkit-flex-grow: $grow;
+	-moz-box-flex: $grow;
+	-ms-flex-positive: $grow;
+	flex-grow: $grow;
+}
+
+//---------------------------------------------------------------------------------------------------------
+//
+//	FLEX-SHRINK
+//
+//	The opposite to the flex-grow property - sets the ability of a flex item to shrink if required.
+//
+//	USAGE:
+//	.flex-shrink **defaults to 1 **
+//	.flex-shrink($shrink)
+//
+//	$shrink :  integer value
+//
+//----------------------------------------------------------------------------------------------------------
+
+@mixin flex-shrink($shrink : 1){
+	-webkit-flex-shrink: $shrink;
+	-ms-flex-negative: $shrink;
+	flex-shrink: $shrink;
+}
+
+//---------------------------------------------------------------------------------------------------------
+//
+//	FLEX-BASIS
+//
+//	The flex-basis property defines the default size of a flex item before remaining space is distributed.
+//
+//	USAGE:
+//	.flex-basis **defaults to auto **
+//	.flex-basis($basis)
+//
+//	$basis :  auto / integer value / measurement
+//
+//----------------------------------------------------------------------------------------------------------
+
+@mixin flex-basis($basis : auto){
+	-webkit-flex-basis: $basis;
+	-ms-flex-preferred-size: $basis;
+	flex-basis: $basis;
+}
+
+
+//---------------------------------------------------------------------------------------------------------
+//
+//	FLEX
+//
+//	The flex property is a shorthand combination of flex-grow, flex-shrink and flex-basis
+//
+//	USAGE
+//	.flex **defaults to none**
+//	.flex(none | auto | inherit | initial | content | unset)
+//	.flex($grow, $shrink(optional), $basis(optional)
+//
+//----------------------------------------------------------------------------------------------------------
+
+@mixin flex($flex: none){
+
+	$param: extract($flex, 1);
+
+    @if $param == none {
+		-webkit-box-flex : 0;
+    	-moz-box-flex : 0;
+	}
+
+	@if $param == auto {
+		-webkit-box-flex : 1;
+    	-moz-box-flex : 1;
+	}
+
+	@if not $param == none and not $param == auto {
+		-webkit-box-flex : $param;
+    	-moz-box-flex : $param;
+	}
+
+	-webkit-flex: $flex;
+	-ms-flex: $flex;
+	flex: $flex;
+
+}
+
+
+//---------------------------------------------------------------------------------------------------------
+//	ALIGN SELF
+//
+//	This allows the default alignment (or the one specified by align-items) to be overridden
+//	for individual flex items.
+//
+//	USAGE:
+//	.align-self **defaults to auto**
+//	.align-self($align)
+//
+//	$align :  auto (default) | flex-start | flex-end | center | baseline | stretch
+//----------------------------------------------------------------------------------------------------------
+@mixin align-self($align: auto){
+
+	@if $align == auto {
+		-ms-flex-item-align: $align;
+	}
+
+	@if $align == flex-start {
+		-ms-flex-item-align: start;
+	}
+
+	@if $align == flex-end {
+		-ms-flex-item-align: end;
+	}
+
+	@if $align == center {
+		-ms-flex-item-align: $align;
+	}
+
+	@if $align == baseline {
+		-ms-flex-item-align: $align;
+	}
+
+	@if $align == stretch {
+		ms-flex-item-align: $align;
+	}
+
+	-webkit-align-self: $align;
+	align-self: $align;
+}

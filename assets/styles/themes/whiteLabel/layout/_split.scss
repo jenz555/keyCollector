@@ -1,0 +1,71 @@
+//----------------------------------------------------
+// Split
+//----------------------------------------------------
+
+/*
+ * @example"
+    <div class="split">
+        <div class="split__left">
+            Left Content
+        </div>
+
+        <div class="split__right">
+            Right Content
+        </div>
+    </div>
+
+    More info available: http://ux.allstate.com/ux/Allstate-Style-Guide/#/components/splits
+ *
+ */
+
+.split {
+    font-size: 0;
+    letter-spacing: -1rem; //Fix for Android not supporting font-sizes less than 8px
+}
+
+.split > * {
+    width: 50%;
+    font-size: 1rem;
+    letter-spacing: 0;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.split--top > * {
+    vertical-align: top;
+}
+
+.split--middle > * {
+    vertical-align: middle;
+}
+
+.split--bottom > * {
+    vertical-align: bottom;
+}
+
+.split--trim,
+.split--trimTop,
+.split--trimBottom {
+    padding: 1rem 0;
+}
+
+.split--trim {    
+    border-top: 1px solid $gray-3;
+    border-bottom: 1px solid $gray-3;
+}
+
+.split--trimTop {
+    border-top: 1px solid $gray-3;
+}
+
+.split--trimBottom {
+    border-bottom: 1px solid $gray-3;
+}
+
+.split__left {
+    text-align: left;
+}
+
+.split__right {
+    text-align: right;
+}

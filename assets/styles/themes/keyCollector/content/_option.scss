@@ -1,0 +1,159 @@
+// ------------------------
+//  INFORMATION
+// ------------------------
+// Important: Do not change these core files. Any changes should be
+//            added to a theme file. Example '/themes/txt.scss'
+//
+// Description: the option components are used to style checkboxes and radio buttons. To use these styled input types
+//              they must follow these rules:
+//                  - a radio button or checkbox must be enclosed by their label.
+//                  - a radio button or checkbox <input> tag must always have the 'option__input' class
+//                  - a <span> tag must follow the the <input> tag with the 'option__icon' class or with both
+//                    the 'option__icon' class and the 'option__icon--radio' class.
+//
+// ------------------------
+//  EXAMPLES
+// ------------------------
+//
+// Radio Button:
+// <label class="option" for="radio--1">
+//    <input class="option__input" type="radio" value="Coolness" name="radio" id="radio--1" />
+//    <span class="option__icon option__icon--radio"></span>
+//    Yes
+// </label>
+//
+// Checkbox:
+// <label class="option" for="option">
+//    <input class="option__input" type="checkbox" value="Coolness" name="option" id="option" />
+//    <span class="option__icon"></span>
+//    I agree to the <a href="#">terms &amp; conditions</a>
+// </label>
+//
+//
+// More info available: http://ux.allstate.com/ux/Allstate-Style-Guide/#/components/checkboxs
+//                      and http://ux.allstate.com/ux/Allstate-Style-Guide/#/components/radio-buttons
+//
+//
+// ------------------------
+//  APPENDIX
+// ------------------------
+//
+// .1 the base 'option__input' class hides the default browser input
+// .2 Checkbox (square)
+// .3 Radio (circular)
+//
+
+$brand-disabled: #bfd7f0;
+.option__icon {
+    @include border-radius(2px);
+     border: 2px solid $gray-4;
+}
+
+.option__icon:hover {
+    border-color: $blue-1;
+}
+
+.option__icon--radio {
+    @include border-radius(50%);
+    border: 2px solid $gray-4;
+}
+
+.option__input:focus + .option__icon,
+.option__input:focus + input[type='hidden'] + .option__icon  {
+    border: 2px solid $blue-1;
+    outline: $blue-3;
+    @include dropShadow(0 0 8px rgba(102, 175, 233, 0.6));
+}
+
+.option__input:checked + .option__icon,
+.option__input:checked + input[type='hidden'] + .option__icon {
+    border: 2px solid $blue-1;
+}
+
+.option__input:disabled:checked + .option__icon--radio:before,
+.option__input:disabled:checked + input[type='hidden'] + .option__icon--radio:before {
+    background: $brand-disabled;
+
+}
+
+.option__input:disabled:checked + .option__icon--radio,
+.option__input:disabled:checked + input[type='hidden'] + .option__icon--radio {
+    border: 2px solid $brand-disabled;
+    outline: $blue-3;
+}
+
+.option__input:checked + .option__icon--radio,
+.option__input:checked + input[type='hidden'] + .option__icon--radio {
+    border: 2px solid $blue-1;
+    background-image: none;
+}
+
+.option__input:checked + .option__icon--radio:before,
+.option__input:checked + input[type='hidden'] + .option__icon--radio:before {
+    background: $blue-1;
+}
+
+.option--hasError > .option__icon {
+    border: 2px solid $color-error;
+}
+
+.option--hasError > .option__input + .option__icon,
+.option--hasError > .option__input + input[type='hidden'] + .option__icon  {
+    border: 2px solid $color-error;
+}
+
+.option--hasError > .option__input:focus + .option__icon,
+.option--hasError > .option__input:focus + input[type='hidden'] + .option__icon  {
+    border: 2px solid $color-error;
+    outline: $color-error;
+    @include dropShadow(1px 0 2px rgba(207, 16, 45, 0.75));
+}
+
+.option--hasError > input.option__input[type=checkbox]:checked + .option__icon,
+.option--hasError > input.option__input[type=checkbox]:checked + input[type='hidden'] + .option__icon {
+    border: 2px solid $color-error;
+    background-image: url(data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0D%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2016.0.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0D%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E%0D%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%0D%0A%09%20width%3D%2222px%22%20height%3D%2218px%22%20viewBox%3D%220%200%2022%2018%22%20enable-background%3D%22new%200%200%2022%2018%22%20xml%3Aspace%3D%22preserve%22%3E%0D%0A%3Cpath%20fill%3D%22%23cf102d%22%20d%3D%22M18.684%2C0.62L7.432%2C12.888l-4.115-4.49c-0.758-0.827-1.989-0.827-2.749%2C0c-0.758%2C0.827-0.758%2C2.167%2C0%2C2.996%0D%0A%09l5.491%2C5.984C6.439%2C17.791%2C6.938%2C18%2C7.434%2C18s0.992-0.209%2C1.372-0.622L21.431%2C3.614c0.759-0.827%2C0.759-2.166%2C0-2.993%0D%0A%09C20.674-0.206%2C19.444-0.207%2C18.684%2C0.62z%22/%3E%0D%0A%3C/svg%3E%0D%0A);
+    background-repeat: no-repeat;
+}
+
+.option--hasError > .option__input:focus + .option__icon,
+.option--hasError > .option__input:focus + input[type='hidden'] + .option__icon  {
+    border: 2px solid $color-error;
+    outline: $color-error;
+    @include dropShadow(1px 0 2px rgba(207, 16, 45, 0.75));
+}
+
+.option--hasError > input.option__input[type=checkbox]:checked + .option__icon,
+.option--hasError > input.option__input[type=checkbox]:checked + input[type='hidden'] + .option__icon {
+    border: 2px solid $color-error;
+}
+
+.option__text {
+    padding-left: 0.625rem
+}
+
+.option__input:disabled + .option__icon,
+.option__input:disabled + input[type='hidden'] + .option__icon {
+    border: 2px solid $gray-3;
+    background-image: none;
+}
+
+.option__input:disabled ~ .option__text,
+.option__input:disabled ~ .option__text {
+    color: $gray-3;
+}
+
+/* checkbox disabled and checked formatting */
+.option__input:disabled:checked  ~ .option__text,
+.option__input:disabled:checked  ~ .option__text {
+    color: $gray-3;
+}
+
+input.option__input[type=checkbox]:disabled:checked + .option__icon,
+input.option__input[type=checkbox]:disabled:checked + input[type='hidden'] + .option__icon {
+    border: 2px solid $brand-disabled;
+    background-image: url(data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0D%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2016.0.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0D%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E%0D%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%0D%0A%09%20width%3D%2222px%22%20height%3D%2218px%22%20viewBox%3D%220%200%2022%2018%22%20enable-background%3D%22new%200%200%2022%2018%22%20xml%3Aspace%3D%22preserve%22%3E%0D%0A%3Cpath%20fill%3D%22%23bfd7f0%22%20d%3D%22M18.684%2C0.62L7.432%2C12.888l-4.115-4.49c-0.758-0.827-1.989-0.827-2.749%2C0c-0.758%2C0.827-0.758%2C2.167%2C0%2C2.996%0D%0A%09l5.491%2C5.984C6.439%2C17.791%2C6.938%2C18%2C7.434%2C18s0.992-0.209%2C1.372-0.622L21.431%2C3.614c0.759-0.827%2C0.759-2.166%2C0-2.993%0D%0A%09C20.674-0.206%2C19.444-0.207%2C18.684%2C0.62z%22/%3E%0D%0A%3C/svg%3E%0D%0A);
+    background-repeat: no-repeat;
+}
+
+

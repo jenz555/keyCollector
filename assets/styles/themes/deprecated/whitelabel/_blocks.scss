@@ -1,0 +1,98 @@
+//----------------------------------------------------
+// Blocks
+//----------------------------------------------------
+
+/*
+ * @example"
+    <ul class="blocks blocks--2up">
+        <li>
+            <div class="module"></div>
+        </li>
+        <li>
+            <div class="module"></div>
+        </li>
+    </ul>
+
+    More info available: http://ux.allstate.com/ux/Allstate-Style-Guide/#/components/blocks
+ *
+ */
+
+.blocks {
+    margin: (-$gutter) 0 0 (-$gutter);
+    font-size: 0; // Removes extra space when using inline-block
+    letter-spacing: 0;
+    line-height: 0;
+    list-style-type: none;
+    word-spacing: 0;
+}
+
+.blocks > * {
+    width: 100%;
+    display: inline-block;
+    padding: $gutter 0 0 $gutter;
+    position: relative;
+    font-size: $base-fontSize; // Reset font-size back to normal
+    line-height: $base-lineHeight;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+}
+
+.blocks--2up > * {
+    width: 50%;
+}
+
+.blocks--3up > * {
+    width: 33.333333%;
+}
+
+.blocks--4up > * {
+    width: 25%;
+}
+
+
+//----------------------------------------------------
+// Media Queries
+//----------------------------------------------------
+
+@media (min-width: $breakpoint-medium) {
+    .blocks--2up--medium > * {
+        width: 50%;
+    }
+
+    .blocks--3up--medium > * {
+        width: 33.333333%;
+    }
+
+    .blocks--4up--medium > * {
+        width: 25%;
+    }    
+}
+
+@media (min-width: $breakpoint-large) {
+    .blocks--2up--large > * {
+        width: 50%;
+    }
+
+    .blocks--3up--large > * {
+        width: 33.333333%;
+    }
+
+    .blocks--4up--large > * {
+        width: 25%;
+    }    
+}
+
+@media (min-width: $breakpoint-xlarge) {
+    .blocks--2up--xlarge > * {
+        width: 50%;
+    }
+
+    .blocks--3up--xlarge > * {
+        width: 33.333333%;
+    }
+
+    .blocks--5up--xlarge > * {
+        width: 25%;
+    }   
+}

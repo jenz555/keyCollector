@@ -1,0 +1,31 @@
+//----------------------------------------------------
+// Vr
+//----------------------------------------------------
+
+/*
+ * @example"
+   
+
+   More info available: http://ux.allstate.com/ux/Allstate-Style-Guide/#/components/vertical-rhythm
+ *
+ */
+
+.vr {
+    @include vr(1);
+}
+
+.vr--x2 {
+    @include vr(2);
+}
+
+.vr--x3 {
+    @include vr(3);
+}
+
+.vr--x4 {
+    @include vr(4);
+}
+
+.vr--x5 {
+    @include vr(5);
+}

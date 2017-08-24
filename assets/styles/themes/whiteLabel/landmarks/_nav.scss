@@ -1,0 +1,45 @@
+
+.navMenu--vert > * + * {
+    border-top: 1px solid $white;
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+}
+
+.nav__link {
+    color: $white;
+    font-size: 0.9rem;
+}
+
+a:visited.nav__link {
+    color: $white;
+}
+
+.navMenu--vert > li:last-child{
+   padding-bottom: 1rem;
+}
+
+.navMenu--horz > * + *  {
+    border-left: 1px solid $white;
+    padding-left: .6rem;
+    margin-left: .4rem;
+}
+
+.nav--hide {
+    display: none;
+}
+
+.nav--show {
+    display: block;
+}
+
+@media (max-width: $breakpoint-medium) {
+    .nav > * + * {
+        border-top: 1px solid $white;
+    }
+
+    .navMenu--vert {
+      font-size: 1rem;
+    }
+
+}
+

@@ -1,0 +1,269 @@
+/* TIMEPICKER DROPDOWN
+---------------------------------------*/
+.timepicker * {
+	vertical-align: middle;
+}
+.timepicker .select {
+	display: inline-block;
+	min-width: 9.375rem;
+}
+.timepicker__label {
+	padding: 0 0.3125rem;
+}
+
+/* CALENDAR STYLE TIMEPICKER
+---------------------------------------*/
+.timepicker--schedulerWrapper {
+	display: inline-block;
+	position: relative;
+}
+.timepicker--schedulerWrapper:before {
+	background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCA2NCA2NCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNjQgNjQiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTMyLDAuNGMtMTcuMywwLTMxLjMsMTQtMzEuMywzMS4zYzAsMTcuMywxNCwzMS4zLDMxLjMsMzEuM2MxNy4zLDAsMzEuMy0xNCwzMS4zLTMxLjNDNjMuMywxNC40LDQ5LjMsMC40LDMyLDAuNHogTTMyLDU1LjUNCgljLTEzLjIsMC0yMy44LTEwLjctMjMuOC0yMy44UzE4LjgsNy45LDMyLDcuOXMyMy44LDEwLjcsMjMuOCwyMy44UzQ1LjIsNTUuNSwzMiw1NS41eiIvPg0KPHBvbHlsaW5lIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSI3LjQ0MjMiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgcG9pbnRzPSIzMS4xLDExLjYgMzEuMSwzNi4xIDQ2LjEsMzYuMSAiLz4NCjwvc3ZnPg0K') no-repeat center center;
+	content: '';
+	position: absolute;
+	display: inline-block;
+	top: 0;
+	right: 0;
+	background-color: $gray-5;
+	pointer-events: none;
+	background-size: 1.375rem;
+	width:2.5rem;
+	height:2.75rem;
+}
+
+[id^="timepicker--scheduler-"] .anchor {
+	display: inline-block;
+	cursor: pointer;
+	font-size: 0.8125rem;
+	margin-left:0.625rem;
+}
+
+.timepicker--schedulerWrapper.isActive .input--timepicker {
+    border-color: $gray-3;
+    outline: 0;
+}
+.timepicker--scheduler {
+	background-color: $gray-1;
+	border: 4px solid darken($gray-1, 5%);
+	display: none;
+	overflow: hidden;
+	position: fixed;
+	top: 50%;
+	z-index: 1000;
+	width: auto;
+	@include transform(translateY(-50%));
+	left: 0.9375rem;
+	right: 0.9375rem;
+	font-size: 0.8125rem;
+	padding: 0.9375rem;
+}
+
+.timepicker--schedulerWrapper:focus {
+	outline: 0;
+}
+.timepicker--schedulerWrapper.isActive .timepicker--scheduler {
+	display: block;
+}
+.timepicker--scheduler__header {
+	position: relative;
+	text-align: center;
+	padding-bottom:0.9375rem;
+}
+
+.timepicker--scheduler__header__label {
+	color: $gray-6;
+	font-size: 1.25rem;
+}
+
+.timepicker--scheduler__footer {
+	background-color: $gray-1;
+	text-align: center;
+	text-transform: uppercase;
+	border-top: 1px solid $gray-4;
+	padding-top:0.9375rem;
+}
+
+.timepicker--scheduler__body {
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	max-height: 26.56rem;
+}
+.timepicker--scheduler__body > * {
+	margin-bottom: 1.125rem;
+    padding-top: 0.75rem;
+}
+.timepicker--scheduler__body > * {
+	padding-top: 0.75rem;
+}
+.timepicker--scheduler__optionModule {
+	position: relative;
+}
+.timepicker--scheduler__optionModule:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+.timepicker--scheduler__optionModule > * {
+	color: $gray-6;
+	cursor: pointer;
+	display: block;
+	float: left;
+	text-align: center;
+	width: 16.666%;
+	font-size:1rem;
+	line-height: 2.5rem;
+	height: 2.5rem;
+}
+.timepicker--scheduler__optionModule[data-section] {
+	border-top: 1px solid $gray-4;
+}
+.timepicker--scheduler__optionModule[data-section]:before {
+	content: attr(data-section);
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+	color: $gray-6;
+	background-color: $gray-1;
+	text-transform: uppercase;
+	font-size: 0.6875rem;
+	padding: 0 0.25rem;
+	top: -0.5625rem;
+	@include transform(translateX(-50%));
+}
+.timepicker--scheduler__optionModule[data-section="Minutes"] {
+	margin-bottom: 0;
+}
+.timepicker--scheduler__optionModule[data-section="Time of Day"] {
+	border-top: 0;
+}
+.timepicker--scheduler__optionModule[data-section="Time of Day"]:before {
+	content: '';
+}
+.timepicker--scheduler__optionModule[data-section="Time of Day"] > * {
+	background-color: $white;
+	width: 50%;
+	border: 1px solid $gray-4;
+}
+.timepicker--scheduler__optionModule[data-section="Time of Day"] > *:hover {
+	border: 1px solid $gray-4;
+}
+.timepicker--scheduler__optionModule[data-section="Time of Day"] > :first-child {
+	border-right: 0;
+}
+.timepicker--scheduler__optionModule[data-section="Time of Day"] > :last-child {
+	border-left: 0;
+
+}
+.timepicker--scheduler__optionModule[data-section="Time Zone"] > * {
+	font-size: 0.875rem;
+}
+.timepicker--scheduler__optionModule > *:hover,
+.timepicker--scheduler__optionModule > .isTabbed,
+.timepicker--scheduler__optionModule > :focus,
+.timepicker--scheduler__footer .btn.isTabbed {
+	border: 1px solid $gray-5;
+	outline: 0;
+}
+.timepicker--scheduler__optionModule > *.isSelected {
+	background-color: $gray-6;
+	color: $white;
+	font-weight: bold;
+	font-size: 0.9375rem;
+}
+.timepicker--scheduler__optionModule > *.isSelected.isTabbed {
+	background-color: $gray-5;
+}
+.timepicker__optionModule__option[disabled] {
+	background: transparent;
+	color: $gray-3;
+	opacity: 1.0;
+}
+.timepicker__optionModule__option[disabled].isTabbed {
+	background: $gray-2;
+}
+.timepicker--scheduler__optionModule .btn,
+.timepicker--scheduler__footer .btn {
+	display: inline-block;
+	text-shadow: none;
+	font-size:1rem;
+	min-height:1rem;
+	padding: 0.5rem;
+}
+.timepicker--scheduler__footer .btn,
+.timepicker--scheduler__footer .btn:focus {
+	color: $gray-3;
+}
+.timepicker--scheduler__footer .btn {
+	display: block;
+	background-color: $white;
+	border: 1px solid $gray-4;
+	color: $gray-5;
+}
+.timepicker--scheduler__footer .btn:hover,
+.timepicker--scheduler__optionModule[data-section="Time of Day"] > *:hover {
+	background-color: $gray-5;
+	color: $white;
+}
+.timepicker--scheduler__optionModule .btn:hover,
+.timepicker--scheduler__optionModule .btn.isSelected {
+	background-color: $gray-5;
+}
+.timepicker--scheduler__footer .btn[disabled],
+.timepicker--scheduler__footer .btn[disabled]:hover {
+	display: block;
+	color: $gray-5;
+	background-color: $gray-2;
+	border: 1px solid $gray-2;
+}
+.timepicker--scheduler .select {
+	width: 100%;
+}
+.timepicker--scheduler .select__menu {
+	font-size:  0.8125rem;
+}
+.timepicker--scheduler .select,
+.timepicker--scheduler .select__icon,
+.timepicker--scheduler .select__icon::before {
+	height: 2.125rem;
+}
+.btn--setToNow {
+	color: $gray-5;
+	display: inline-block;
+	font-size: 0.75rem;
+}
+.btn--setToNow:hover {
+	text-decoration: none;
+}
+.timepicker--scheduler--overflow .timepicker--scheduler__header,
+.timepicker--scheduler--overflow .timepicker--scheduler__footer {
+	position: relative;
+	z-index: 3;
+}
+
+
+@media (min-width: 376px) {
+	.timepicker--scheduler {
+		position: absolute;
+		left: 0;
+		bottom: auto;
+		right: auto;
+		top: 3.125rem;
+		width: 18.75rem;
+	}
+	.timepicker--scheduler--overflow .timepicker--scheduler__header,
+	.timepicker--scheduler--overflow .timepicker--scheduler__footer {
+		box-shadow: none;
+	}
+	.timepicker--scheduler__body {
+		max-height: none;
+		overflow: visible;
+	}
+	.timepicker--scheduler__optionModule > * {
+		font-size: 0.875rem;
+	}
+	.timepicker--scheduler__optionModule .btn,
+	.timepicker--scheduler__footer .btn,
+	.timepicker--scheduler__optionModule[data-section="Time Zone"] > * {
+		font-size:  0.8125rem;
+	}
+}

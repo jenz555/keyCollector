@@ -1,0 +1,58 @@
+// ------------------------
+//  INFORMATION
+// ------------------------
+// Important: Do not change these core files. Any changes should be
+//            added to a theme file. Example '/themes/tab.less'
+//
+// Description: the tab component is platformed on the toggle-core concept and allows the display
+//				of tabs on all viewports:
+//
+
+.tabs__hd {
+	overflow: hidden;
+	@include display-flex();
+	@include align-content();
+	@include justify-content();
+}
+
+.tabs__hd > * + * {
+	margin-left: 0.0625rem;
+}
+
+.tabs__hd__tab {
+	cursor: pointer;
+	padding: 1rem;
+	background-color: $gray-2;
+    color: $black;
+	text-align: center;
+	position: relative;
+	@include display-flex();
+	@include align-items(center);
+	@include justify-content(center);
+	@include flex-grow(1);
+}
+
+.tabs__hd__tab:hover {
+	background-color: $gray-6;
+	outline: none;
+	color: $white;
+}
+
+.tabs__hd__tab[aria-selected="true"],
+.tabs__hd__tab[aria-selected="true"]:hover {
+	color: $black;
+	outline: none;
+	background-color: $white;
+	@include dropShadow(inset 0 6px 0 $gray-5);
+}
+
+.tabs__bd__content {
+	display: none;
+	padding: 1rem 0;
+
+	&[aria-hidden="false"] {
+  		display: block;
+  		outline: none;
+	}
+}
+

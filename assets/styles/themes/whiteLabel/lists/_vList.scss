@@ -1,0 +1,102 @@
+// ------------------------
+//  INFORMATION
+// ------------------------
+// Important: Do not change these core files. Any changes should be 
+//            added to a theme file. Example '/themes/txt.scss'
+// 
+// Description: This vList class, is a list class where each element is added on vertically.
+//
+//
+// ------------------------ 
+//  EXAMPLES
+// ------------------------
+//
+//    <ul class="vList">
+//        <li><strong>Default Align:</strong></li>
+//        <li>List item 1</li>
+//        <li>List item 2</li>
+//        <li>List item 3</li>
+//    </ul>
+//
+//    More info available: http://ux.allstate.com/ux/Allstate-Style-Guide/#/components/lists
+//
+// ------------------------
+//  APPENDIX
+// ------------------------
+// 
+// 1. the '> * + *' syntax specifies to add the styling to all children elements of that class
+//
+//
+
+.vList > * {
+    display: block;
+}
+
+.vList--toHList > * {
+    margin:0;
+    display: block;
+} 
+
+.vList > * + * { //[1]
+    margin:0;
+    margin-top: 1rem;
+}
+
+.vList--toHList > * + * { //[1]
+    margin:0;
+    margin-top: 1rem;
+}
+
+.vList--piped > * + * { //[1]
+    border-top: 1px solid $gray-4;
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
+.vList--std > * + * { //[1]
+    margin-top: 0.5rem;
+}
+
+.vList--tight > * + * { //[1]
+    margin-top: 0;
+}
+
+.vList--right {
+    text-align: right;
+}
+
+.vList--left {
+    text-align: left;
+}
+
+.vList--centered {
+    text-align: center;
+}
+
+.vList--top > * {
+    vertical-align: top;
+}
+
+.vList--middle > * {
+    vertical-align: middle;
+}
+
+.vList--bottom > * {
+    vertical-align: bottom;
+}
+
+
+//----------------------------------------------------
+// Media Queries
+//----------------------------------------------------
+
+@media (min-width: $breakpoint-medium) {
+    .vList--toHList > * {
+        display: inline-block;
+    }  
+    
+    .vList--toHList > * + * { //[1]
+        margin: 0;
+        margin-left: 1.5rem;
+    }
+}

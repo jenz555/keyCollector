@@ -1,0 +1,30 @@
+// ------------------------
+//  INFORMATION
+// ------------------------
+// Important: Do not change these core files. Any changes should be 
+//            added to a theme file. Example '/themes/_fonts.scss'
+// 
+//
+// ------------------------ 
+//  DESCRIPTION
+// ------------------------
+// Use fonts.scss to import a specific font.
+// The @font-face rule allows custom fonts to be loaded on a webpage. 
+// Once added to a stylesheet, the rule instructs the browser to download the font 
+// from where it is hosted, then display it as specified in the CSS.
+//
+// ------------------------ 
+//  EXAMPLES
+// ------------------------
+//
+//@font-face {
+//  font-family: 'MyWebFont';
+//  url('webfont.woff2') format('woff2'), /* Better Compression than woff  */
+//  url('webfont.woff') format('woff'), /* Modern Browsers */
+//  url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+// }
+// 
+// Refer to the name of the font ('MyWebFont') through the font-family property:
+// .body {
+//      font-family: 'MyWebFont', Fallback, sans-serif;
+// }

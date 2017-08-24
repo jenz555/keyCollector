@@ -1,0 +1,53 @@
+// ------------------------
+//  INFORMATION
+// ------------------------
+// Important: Do not change these core files. Any changes should be 
+//            added to a theme file. Example '/themes/txt.scss'
+// 
+// Description: This oList class, is a list class where each element is marked and displayed numerically when rendered.
+//
+//
+// ------------------------ 
+//  EXAMPLES
+// ------------------------
+//
+//    <ol class="oList">
+//        <li><strong>Default Align:</strong></li>
+//        <li>List item 1</li>
+//        <li>List item 2</li>
+//        <li>List item 3</li>
+//    </ol>
+//
+//    More info available: http://ux.allstate.com/ux/Allstate-Style-Guide/#/components/lists
+//
+// ------------------------
+//  APPENDIX
+// ------------------------
+// 
+// 1. the '> * + *' syntax specifies to add the styling to all children elements of that class
+//
+//
+
+.oList {
+    counter-reset: count;
+}
+
+.oList > * {
+    list-style: none;
+    list-style-position: inside;
+    line-height: 1.2;
+    padding-left: 1.25rem;
+    position:relative;
+    counter-increment: count;
+}
+
+.oList > *:before {
+    content: counter(count) ".";
+    position:absolute;
+    top:0;
+    left:0;       
+}
+
+.oList > * + * { //[1]
+    margin-top: 0.5rem;
+}

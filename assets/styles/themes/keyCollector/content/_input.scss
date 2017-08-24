@@ -1,0 +1,91 @@
+// ------------------------
+//  INFORMATION
+// ------------------------
+// Important: Do not change these core files. Any changes should be
+//            added to a theme file. Example '/themes/txt.scss'
+//
+// Description: These input components are used for form field elements. The base class 'input' and the modifiers below
+//              will style text fields, numeric fields, and currency fields. For radio buttons and checkboxs please check
+//              the _options.less file.
+//
+//              There are various state and size modifiers for input fields these modifiying classes are marked by the appendix.
+//              the input state modifiers should be used to
+//
+// ------------------------
+//  EXAMPLES
+// ------------------------
+//
+//   text input
+//   ----------
+//   <input id="textField" class="input input--txt" type="text">
+//
+//   numeric input
+//   ------------
+//   <input type="number" val="" class="input input--number" />
+//
+//   currency input
+//   --------------
+//   <div class="input--currency">
+//       <input type="number" val="" class="input input--number" />
+//   </div>
+//
+//   affix input
+//   --------------
+//   <div class="affix affix">
+//      <div class="affix__icon">$</div>
+//      <input class="affix__input input input--number" type="number" value="" />
+//   </div>
+//
+// http://ux.allstate.com/ux/Allstate-Style-Guide/#/components/inputs
+//
+//
+// ------------------------
+//  APPENDIX
+// ------------------------
+//
+// 1. field size modifiers
+// 2. field state modifiers
+// 3. remove 'x' icon for IE 11
+// 4. resolves iOS inverted box shadow on input
+//
+
+.input {
+    @include border-radius(4px);
+}
+
+.input:focus {
+    @include dropShadow(0 0 8px rgba(102, 175, 233, 0.6));
+}
+
+
+.input--currency > * {
+    margin-left: 1.563rem;
+}
+
+.input--currency:before {
+    font-family: $font-brand-bold;
+}
+
+//----------------------------------------------------
+// [2] Input states
+//----------------------------------------------------
+
+.input--hasError:focus,
+.has-error .input:focus {
+    @include dropShadow(0 0 8px rgba(207, 16, 45, 0.6));
+}
+
+.input--hasSuccess,
+.has-hasSuccess .input {
+    border: 2px solid $green-3;
+}
+
+.input--hasSuccess:focus,
+.has-hasSuccess .input:focus {
+    border-color: $green-2;
+    @include dropShadow(0 0 8px rgba(114, 179, 37, 0.6));
+}
+
+.input--textarea {
+    width: 100%;
+}

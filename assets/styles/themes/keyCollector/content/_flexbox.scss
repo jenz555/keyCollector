@@ -1,0 +1,103 @@
+
+.flexbox--container {
+    display: flex; /* or inline-flex */
+    // background-color: #FFFFFF
+  }
+  
+  .item--sidebar--container {
+    display: flex;
+    flex-direction: column;
+    //background-color: green;
+    align-content: center;
+    flex: 2;
+    justify-content: center;
+  }
+  
+  .item--sidebar--top {
+    margin: 0 auto;
+    flex: 1;
+    background-color: yellow;
+  
+  }
+  
+  .item--sidebar--bottom--container {
+      margin: 0 auto;
+      display: flex;
+     flex: 1;
+     //background-color: purple;
+  }
+  
+  .item--sidebar--bottom {
+     align-self: flex-end;
+    //background-color: red;
+  }
+  
+  .item--sidebar--container {
+    flex-direction: column;
+   
+  }
+  
+  .item--main {
+    flex: 1;
+   // background-color: blue;
+  }
+
+
+
+.flex__grid {
+    @include display-flex();
+     @include display-flex();
+   // @include align-items(center);
+  //  @include flex-flow(row, wrap);
+}
+
+.jc-spaceBetween {
+	justify-content: space-between;
+}
+
+
+// .item {
+//     width: 60%;
+// }
+
+// .item__image {
+//     width: 40%;
+// }
+
+
+.flex__item--1 {
+    @include flex-grow(1);
+    background-color: red;
+
+}
+
+.flex__item--2 {
+    @include flex-grow(2);
+    background-color: blue;
+    
+}
+.flex__item--3 {
+    @include flex-grow(3);
+    background-color: purple
+    
+}
+
+.flex__item--4 {
+    @include flex-grow(4);
+    background-color: green
+    
+}
+
+.flex__item--5 {
+    @include flex-grow(5);
+    background-color: green
+    
+}
+
+.flex__item--center-align {
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+    max-width: 50%;
+}

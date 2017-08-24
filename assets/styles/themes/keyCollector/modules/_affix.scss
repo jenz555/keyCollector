@@ -1,0 +1,39 @@
+.affix__icon {
+    font-family: "Allstate Sans Black",Arial,Helvectica,sans-serif;
+}
+
+.affix__input {
+    @include border-radius(4px);
+}
+
+.affix--inside {
+    @include border-radius(4px);
+}
+
+.affix--inside > .affix__icon {
+    @include border-radius(4px 0 0 4px);
+}
+
+.affix--inside--post {
+    @include border-radius(4px);
+}
+
+.affix--inside--post > .affix__icon {
+    @include border-radius(0 4px 4px 0);
+}
+
+.affix--inside--post > .affix__input > .input {
+    padding-right: 2.5rem;
+}
+
+
+.affix--inside.affix--hasError > .affix__icon {
+    @include border-radius(2px 0 0 2px);
+}
+
+//Disabled States
+.affix__input > .input[disabled]{
+    background:$gray-1;
+    color:$gray-4;
+    opacity: 1;
+}

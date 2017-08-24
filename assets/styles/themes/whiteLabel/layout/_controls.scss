@@ -1,0 +1,30 @@
+//----------------------------------------------------
+// Control
+//----------------------------------------------------
+
+.control {
+    @include clearfix();
+}
+
+.control__group > * + * {
+    margin-top: 1.563rem; //25px
+}
+
+
+//----------------------------------------------------
+// Media Queries
+//----------------------------------------------------
+
+@media (min-width: $breakpoint-medium) {
+    .control__group > * {
+        float: right;
+    }
+
+    .control__group > * {
+        margin: 0 0 0 1.563rem; //25px;
+    }
+
+    .control__group > * + * {
+        margin-left: 0;
+    }    
+}

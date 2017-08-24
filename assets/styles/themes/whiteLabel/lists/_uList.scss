@@ -1,0 +1,54 @@
+// ------------------------
+//  INFORMATION
+// ------------------------
+// Important: Do not change these core files. Any changes should be 
+//            added to a theme file. Example '/themes/txt.scss'
+// 
+// Description: This uList class, is a base unordered list class.
+//
+//
+// ------------------------ 
+//  EXAMPLES
+// ------------------------
+//
+//    <ul class="uList">
+//        <li><strong>Default Align:</strong></li>
+//        <li>List item 1</li>
+//        <li>List item 2</li>
+//        <li>List item 3</li>
+//    </ul>
+//
+//    More info available: http://ux.allstate.com/ux/Allstate-Style-Guide/#/components/lists
+//
+// ------------------------
+//  APPENDIX
+// ------------------------
+// 
+//
+//
+
+
+.uList {
+    font-size: 0;
+    letter-spacing: -1rem; //Fix for Android not supporting font-sizes less than 8px
+}
+
+.uList > * {
+    list-style: none;
+    position: relative;
+    padding-left: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.2;
+    letter-spacing: 0;
+}
+
+.uList > * + * {
+    margin-top: 0.5rem;
+}
+
+.uList > *:before {
+    content: "\02022";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+}

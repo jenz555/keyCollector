@@ -1,0 +1,22 @@
+.nav {
+    font-family: $font-brand;
+}
+
+.navMenu--vert > * + * {
+    border-top: 1px solid $blue-3;
+}
+
+.navMenu--horz > * + *  {
+    border-left: 1px solid $blue-3;
+}
+
+@media (max-width: $breakpoint-medium) {
+      .nav > * + * {
+        border-top: 1px solid $blue-3;
+    }
+}
+
+.nav__link {
+    color: $white;
+    font-size: 0.9rem;
+}

@@ -1,0 +1,109 @@
+// ------------------------
+//  INFORMATION
+// ------------------------
+// Important: Do not change these core files. Any changes should be
+//            added to a theme file. Example '/themes/txt.scss'
+//
+// Description: This hList class, is a list class where each element is added on horizontally.
+//
+//
+// ------------------------
+//  EXAMPLES
+// ------------------------
+//
+//    <ul class="hList">
+//        <li><strong>Default Align:</strong></li>
+//        <li>List item 1</li>
+//        <li>List item 2</li>
+//        <li>List item 3</li>
+//    </ul>
+//
+//    More info available: http://ux.allstate.com/ux/Allstate-Style-Guide/#/components/lists
+//
+// ------------------------
+//  APPENDIX
+// ------------------------
+//
+// 1. the '> * + *' syntax specifies to add the styling to all children elements of that class
+//
+//
+
+.hList > * {
+    display: inline-block;
+}
+
+.hList--toVList > * {
+    display: inline-block;
+}
+
+.hList > * + * { //[1]
+    margin-left: 1.5rem;
+}
+
+.hList--toVList > * + * { //[1]
+    margin-left: 1rem;
+    margin-top: 0;
+}
+
+.hList--piped > * + * { //[1]
+    border-left: 1px solid $gray-4;
+    margin-left: 1rem;
+    padding-left: 1rem;
+}
+
+.hList--right {
+    text-align: right;
+}
+
+.hList--left {
+    text-align: left;
+}
+
+.hList--centered {
+    text-align: center;
+}
+
+.hList--middle,
+.hList--bottom,
+.hList--top {
+  @include display-flex();
+}
+
+.hList--top {
+  @include align-items(flex-start);
+}
+
+.hList--middle  {
+  @include align-items(center);
+}
+
+.hList--bottom {
+  @include align-items(flex-end);
+}
+
+.hList--justify {
+    width:100%;
+    display:table;
+    table-layout:fixed;
+}
+
+.hList--justify > * {
+    text-align:center;
+    display:table-cell;
+    vertical-align:middle;
+}
+
+//----------------------------------------------------
+// Media Queries
+//----------------------------------------------------
+
+@media (min-width: $breakpoint-medium) {
+    .hList--toVList > * {
+        display: block;
+    }
+
+    .hList--toVList > * + * { //[1]
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+}

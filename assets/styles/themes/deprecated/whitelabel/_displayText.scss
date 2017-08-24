@@ -1,0 +1,92 @@
+// ------------------------
+//  INFORMATION
+// ------------------------
+// Important: Do not change these core files. Any changes should be
+//            added to a theme file. Example '/themes/txt.scss'
+//
+// Description: these hdg and hdg--[x] components are used to create text headers.
+//
+// ------------------------
+//  EXAMPLES
+// ------------------------
+//
+//
+//
+// in process of being deprecated
+//
+//    <h1 class="display display--36">H1 Heading (2.25rem | 36px)</h1>
+//    <h2 class="display display--28">H2 Heading (1.625rem | 28px)</h2>
+//    <h3 class="display display--24">H3 Heading (1.5rem | 24px)</h3>
+//    <h4 class="display display--20">H4 Heading (1.25rem| 20px)</h4>
+//    <h5 class="display display--18">H5 Heading (1.125rem | 18px)</h5>
+//    <h6 class="display display--16">H6 Heading (1rem | 16px)</h6>
+//
+// http://ux.allstate.com/ux/Allstate-Style-Guide/#/components/headings
+//
+//
+// ------------------------
+//  APPENDIX
+// ------------------------
+//
+// .1 changing allstate sans to bold blurs it. keep normal
+//
+
+
+.display {
+	margin: 0;
+	padding: 0;
+	font-family: $font-brand;
+    line-height:1.2;
+}
+
+.display--36 {
+	font-size: 2.25rem;
+}
+
+.display--28 {
+	font-size: 1.75rem;
+}
+
+.display--24 {
+	font-size: 1.5rem;
+}
+
+.display--20 {
+	font-size: 1.25rem;
+}
+
+.display--18 {
+	font-size: 1.125rem;
+}
+
+.display--16 {
+	font-size: 1rem;
+}
+
+.display--14 {
+	font-size: 0.875rem;
+}
+
+.display--12 {
+	font-size: 0.75rem;
+}
+
+.display--light {
+	font-family: $font-brand-light;
+}
+
+.display--medium {
+	font-family: $font-brand-medium;
+}
+
+.display--bold {
+	font-family: $font-brand-bold;
+}
+
+.display--black {
+	font-family: $font-brand-black;
+}
+
+.display--arial {
+	font-family: $font-brand-light;
+}

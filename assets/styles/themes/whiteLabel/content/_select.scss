@@ -1,0 +1,153 @@
+// ------------------------
+//  INFORMATION
+// ------------------------
+// Important: Do not change these core files. Any changes should be
+//            added to a theme file. Example '/themes/txt.scss'
+//
+// Description: the seelct component is used to style the <select> tag. To use this styled drop down the HTML
+//               must follow these rules:
+//                  - it must be wrapped in a div tag with the class 'select'
+//                  - the select tag must have the class 'select__menu'
+//                  - immediately preceding the closing select tag, still inside of the div holding the select
+//                    tag should be a div with class 'select__icon' and the SVG below in the example
+//
+// ------------------------
+//  EXAMPLES
+// ------------------------
+//
+//  <div class="select">
+//      <select class="select__menu">
+//          <option selected>Select an option</option>
+//          <option>Option 1</option>
+//      </select>
+//      <div class="select__icon">
+//          <svg>
+//              <use xlink:href="#down-arrow"></use>
+//          </svg>
+//      </div>
+//  </div>
+//
+// http://ux.allstate.com/ux/Allstate-Style-Guide/#/components/dropdowns
+//
+//
+// ------------------------
+//  APPENDIX
+// ------------------------
+// 1. Hide native select arrow for IE
+// 2. Graceful degradation for IE9
+
+
+.select {
+    height: 2.75rem;
+    display: block;
+    position: relative;
+    background-color: $white;
+}
+
+.select__menu {
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 0 0.5rem;
+    padding-right: 2.875rem;
+    position: absolute;
+    z-index: $zIndex-1;
+    top: 0;
+    left: 0;
+    border: 1px solid $gray-4;
+    background: transparent;
+    color: $gray-6;
+    font-size: $base-fontSize;
+    font-family: $base-font;
+    @include border-radius(0px);
+    @include appearance();
+}
+
+.select__menu:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+
+.select__menu::-ms-expand {
+    display: none; //[1]
+}
+
+.select__menu:focus {
+    outline: none;
+}
+
+.select--hasError > .select__menu {
+    border: 2px solid $color-error;
+}
+
+.select--hasError > .select__menu:focus {
+    @include dropShadow(0 0 8px rgba(207, 16, 45, 0.6));
+}
+
+.select__icon {
+    background-color: $gray-5;
+    width: 2.75rem;
+    height: 2.75rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-left: 1px solid $gray-5;
+}
+
+.select__icon::before {
+    width: 2.75rem;
+    height: 2.75rem;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20228%20145%22%3E%0D%0A%20%20%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M28.8%206.6L136.9%20115%20114%20138%205.9%2029.6%2028.8%206.6zM222.1%2029.6L114%20138l-22.9-23L199.2%206.6%20222.1%2029.6z%22%20/%3E%0D%0A%3C/svg%3E');
+	background-repeat: no-repeat;
+    background-size:22px 22px;
+    background-position: 50% 50%;
+    display:block;
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.select__menu:focus + .select__icon {
+    background-color: $gray-3;
+}
+
+.select__icon > * {
+    display:none;
+}
+
+.select--isDisabled {
+    background:$gray-1;
+}
+
+.select--isDisabled > .select__menu {
+    color:$gray-5;
+    border: 1px solid transparent;
+}
+
+.select--isDisabled > .select__menu[disabled] {
+    opacity:1;
+}
+
+.select--isDisabled > .select__icon {
+    background:$gray-4;
+    border-left:1px solid transparent;
+    opacity:1;
+}
+
+
+//----------------------------------------------------
+// Size extensions
+//----------------------------------------------------
+
+.select--med {
+    width: 48%;
+}
+
+.select--sm {
+    width: 30%;
+}
+
+.select--micro {
+    width: 6.25rem;
+}

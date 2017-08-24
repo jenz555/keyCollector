@@ -1,0 +1,73 @@
+$hdg--1:   32;
+$hdg--2:   26;
+$hdg--3:   20; 
+$hdg--4:   16; 
+$hdg--5:   14;
+$hdg--6:   12;
+
+.hdg {
+	margin: 0;
+	padding: 0;
+	font-family: $font-brand;
+    line-height: 1.2;
+}
+
+.hdg--1 {
+	font-family: $font-brand-bold;
+}
+
+.hdg--2 {
+	font-size: 1.625rem;
+}
+
+.hdg--3 {
+	font-size: 1.25rem;
+}
+
+.hdg--4 {
+	font-size: 1rem;
+    line-height: 1.4;
+}
+
+.hdg--5 {
+	font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+.hdg--6 {
+	font-size: 0.75rem;
+    line-height: 1.4;
+}
+
+.hdg--bold,
+.hdg--thick {
+	font-family: $font-brand-bold;
+}
+
+.hdg--thin {
+	font-family: $font-brand-light;
+}
+
+.hdg--brand {
+    color: $blue-1;
+}
+
+.hdg--inverse {
+    color: $white;
+}
+
+.hdg--caps {
+	text-transform: uppercase;
+}
+
+.hdg--left {
+    text-align: left;
+}
+
+.hdg--right {
+    text-align: right;
+}
+
+.hdg--center {
+    text-align: center;
+}

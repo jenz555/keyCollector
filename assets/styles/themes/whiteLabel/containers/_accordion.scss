@@ -1,0 +1,61 @@
+.c-accordion {
+
+  &__header {
+    cursor: pointer;
+    display: block;
+    padding: 1rem 1rem 1rem 3rem;
+    font-size: 1rem;
+    position: relative;
+    @include transition(all, .2s, ease-in-out);
+  }
+
+  &__header:before {
+    background: center center no-repeat url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4NCiAgPHBhdGggZmlsbD0iIzAwMDAwMCIgZD0iTTgwLjMsNDguM0wzMi44LDAuOGMtMC45LTAuOS0yLjQtMC45LTMuMywwbC05LjgsOS44Yy0wLjksMC45LTAuOSwyLjQsMCwzLjNsMzYsMzYuMWwtMzYsMzYuMWMtMC45LDAuOS0wLjksMi40LDAsMy4zbDkuOCw5LjhjMC45LDAuOSwyLjQsMC45LDMuMywwbDQ3LjUtNDcuNWMwLjUtMC41LDAuNy0xLjEsMC43LTEuN1M4MC44LDQ4LjgsODAuMyw0OC4zeiIvPg0KPC9zdmc+DQo=');
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    height: 1.12rem;
+    width: 1.12rem;
+    @include transition(all, .2s, ease-in-out);
+    @include transform(translateY(-50%));
+  }
+
+  &__item {
+    border-bottom: 1px solid $gray-3;
+  }
+
+  &__header:hover,
+  &__header:focus {
+    outline: 0;
+    background-color: $gray-1;
+  }
+
+  &__input:checked ~ &__header,
+  &__input:checked ~ &__header:hover {
+  	outline: none;
+    font-weight: bold;
+  }
+
+  &__panel {
+    display: none;
+    padding: 1rem 1rem 1rem 3rem;
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__input ~ &__panel {
+    display: none;
+  }
+
+  &__input:checked ~ &__panel {
+    display: block;
+  }
+
+  &__input:checked ~ &__header:before {
+    @include transform(translateY(-50%) rotate(90deg));
+  }
+}

@@ -1,0 +1,106 @@
+.txt {
+    font-family: $font-brand;
+}
+
+// Text Weights
+.txt--weight-light {
+    font-family: $font-brand-light;
+}
+
+.txt--weight-medium {
+    font-family: $font-brand-medium;
+}
+
+.txt--weight-bold {
+    font-family: $font-brand-bold;
+    font-weight: normal;
+}
+
+.txt--weight-black {
+    font-family: $font-brand-black;
+    font-weight: normal;
+}
+
+// Text Colors
+.txt--color-success {
+    color: $green-1;
+}
+
+.txt--color-brand {
+    color: $blue-1;
+}
+
+.txt--color-brand--2 {
+    color: $blue-2;
+}
+
+.txt--color-brand--3 {
+    color: $blue-3;
+}
+
+.txt--color-brand--4 {
+    color: $blue-4;
+}
+
+.txt--color-brand--5 {
+    color: $blue-5;
+}
+
+.txt--color-brand--6 {
+    color: $blue-6;
+}
+
+.txt--color-violet--1 {
+    color: $violet-1;
+}
+
+.txt--color-violet--2 {
+    color: $violet-2;
+}
+
+.txt--color-violet--2 {
+    color: $violet-2;
+}
+
+@media (max-width: $breakpoint-medium) {
+    .txt--size-36 {
+        font-size: 1.75rem;
+    }
+    h2 {
+        font-size: 1.25rem;
+    }
+    h1 {
+      padding-top: .25rem;
+    }
+}
+
+@media only screen and (max-width: 992px)  {
+
+    h1 {
+        font-size: 1.75rem;
+        padding-top: .25rem;
+    }
+}
+
+@media only screen and (max-width: 893px)  {
+    
+        h1 {
+         
+            font-size: 1.60rem;
+            padding-top: .25rem;
+        }
+    }
+
+
+@media (max-width: $breakpoint-large) {
+    .txt--size-36 {
+        font-size: 1.75rem;
+    }
+    h2 {
+        font-size: 1.25rem;
+    }
+
+}
+
+
+

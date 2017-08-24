@@ -1,0 +1,134 @@
+// ------------------------
+//  INFORMATION
+// ------------------------
+// Important: Do not change these core files. Any changes should be
+//            added to a theme file. Example '/themes/txt.scss'
+//
+// Description: This button component is used to style either the: <a>,<input type="submit">, or <button> tags.
+//              There are 6 different variations of this class: .btn, .btn--progress, .btn--dismiss, .btn--white
+//              and .btn--link. For examples on the usage on each of these modifiers please visit the link provided
+//              in the examples section below.
+//
+// ------------------------
+//  EXAMPLES
+// ------------------------
+//
+//  <a href="#" class="btn">Link Button</a>
+//
+//  <input type="submit" value="Submit Button" class="btn" />
+//
+//  <button class="btn">&lt;Button&gt;</button>
+//
+// http://ux.allstate.com/ux/Allstate-Style-Guide/#/components/buttons
+//
+//
+// ------------------------
+//  APPENDIX
+// ------------------------
+// 1. ???
+// 2. prevent default styling from iOS form fields
+// 3. force line wrapping for buttons that have excessive text
+//
+
+.btn,
+.btn:visited {
+    background-color: $violet-1;
+    font-family: $font-brand;
+    color: $color-text-inverse;
+    @include border-radius(4px);
+   // -webkit-text-shadow: 1px 1px 1px $violet-2, 1px 1px 1px $violet-2; //[1]
+   // text-shadow: 1px 1px 1px $violet-2, 1px 1px 1px $violet-2;
+    @include transition (background-color, 0.15s, ease);
+
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+    background-color: $violet-2;
+}
+
+.btn--isActive,
+.btn:active {
+    @include dropShadow(inset 2px 2px 4px rgba(0,0,0,0.25));
+}
+
+// Secondary
+.btn--brand,
+.btn--brand:visited {
+    background-color: $blue-1;
+    color: $color-text-inverse;
+    -webkit-text-shadow: 1px 1px 1px $blue-5, 1px 1px 1px $blue-5;
+    text-shadow: 1px 1px 1px $blue-5, 1px 1px 1px $blue-5;
+}
+
+.btn--brand:hover,
+.btn--brand:active,
+.btn--brand:focus {
+    background-color: $blue-5;
+    color: $color-text-inverse;
+    text-decoration: none;
+}
+
+.btn--progress,
+.btn--progress:visited {
+    background-color: $green-1;
+    color: $color-text-inverse;
+    -webkit-text-shadow: 1px 1px 1px $green-3, 1px 1px 1px $green-3;
+    text-shadow: 1px 1px 1px $green-3, 1px 1px 1px $green-3;
+}
+
+.btn--progress:hover,
+.btn--progress:active,
+.btn--progress:focus {
+    background-color: $green-3;
+    color: $color-text-inverse;
+    text-decoration: none;
+}
+
+// Tertiary
+.btn--dismiss,
+.btn--dismiss:visited {
+    text-shadow: none;
+    color: $blue-5;
+    background-color: $gray-2;
+    border:1px solid $gray-3;
+}
+
+.btn--dismiss:hover,
+.btn--dismiss:focus {
+  background-color: $white;
+}
+
+
+.btn--white,
+.btn--white:visited {
+    background-color: $white;
+    color: $blue-1;
+    border:1px solid $gray-3;
+    text-shadow: none;
+}
+
+.btn--white:hover,
+.btn--white:active,
+.btn--white:focus {
+    background-color: $blue-4;
+    color: $white;
+    border: 0;
+}
+
+.btn--link,
+.btn--link:visited {
+    background: none;
+    color: $color-link;
+    -webkit-text-shadow:none;
+    text-shadow:none;
+}
+
+.btn--link:hover,
+.btn--link:active,
+.btn--link:focus {
+    background: none;
+    color: $color-link;
+    @include dropShadow(none);
+}

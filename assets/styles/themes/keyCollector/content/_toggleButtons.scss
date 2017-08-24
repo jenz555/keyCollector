@@ -1,0 +1,104 @@
+// ------------------------
+//  INFORMATION
+// ------------------------
+// Important: Do not change these core files. Any changes should be
+//            added to a theme file. Example '/themes/txt.scss'
+//
+// Description: This button Group component is used to create a grouping of buttons where only one can be selected at any given time.
+//
+// ------------------------
+//  EXAMPLES
+// ------------------------
+//
+//    <div class="toggleBtnGroup">
+//        <div class="toggleButton__button">
+//            <input class="toggleButton__radio" type="radio" name="toggle" id="toggle">
+//            <label class="toggleButton__label" for="toggle">Your Total Value</label>
+//        </div>
+//    </div>
+//
+// http://ux.allstate.com/ux/Allstate-Style-Guide/#/components/button-group
+//
+//
+// ------------------------
+//  APPENDIX
+// ------------------------
+//
+//
+
+
+.toggle__button:first-child > .toggle__label,
+.toggle__button--dusty:first-child > .toggle__label--dusty {
+    @include border-radius(4px 0 0 4px);
+    border-left: 1px solid $gray-3;
+
+}
+
+
+.toggle__button:last-child > .toggle__label,
+.toggle__button--dusty:last-child > .toggle__label--dusty {
+    @include border-radius(0 4px 4px 0);
+    border-right: 1px solid $gray-3;
+}
+
+
+.toggle__label,
+.toggle__label--dusty {
+    font-family: $font-brand;
+    color: $gray-6;
+    @include transition(all, .16s, linear);
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: $blue-1;
+    }
+}
+
+.toggle__label--dusty {
+    font-family: $font-brand-bold;
+    color: $blue-1;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: $white;
+        color: $blue-1;
+    }
+}
+
+.toggle__radio:focus + .toggle__label {
+    background-color: $blue-1;
+}
+
+.toggle__radio--dusty:focus + .toggle__label--dusty {
+    background-color: $white;
+    color: $blue-1;
+}
+
+.toggle__label:hover:before {
+    background-color: $blue-1;
+}
+
+.toggle__label--dusty:hover:before {
+    color: $blue-1;
+}
+
+.toggle__radio:checked + .toggle__label {
+    background-color: $blue-1;
+}
+
+.toggle__radio--dusty:checked + .toggle__label--dusty {
+    color: $blue-1;
+    -webkit-text-shadow: 1px 1px 1px $gray-3, 1px 1px 1px $gray-3;
+    text-shadow: 1px 1px 1px  $gray-3, 1px 1px 1px $gray-3;
+    @include dropShadow(inset 0px 1px 2px rgba(204, 204, 204, 0.8));
+}
+
+.toggle__radio:checked:hover + .toggle__label {
+    background-color: $blue-1;
+}
+
+.toggle__radio--dusty:checked:hover + .toggle__label--dusty {
+    color: $blue-1;
+}

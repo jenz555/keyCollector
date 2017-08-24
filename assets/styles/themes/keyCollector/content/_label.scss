@@ -1,0 +1,33 @@
+// ------------------------
+//  INFORMATION
+// ------------------------
+// Important: Do not change these core files. Any changes should be 
+//            added to a theme file. Example '/themes/txt.scss'
+// 
+// Description: the label component is used for form field lebeling. The base class 'label' and the modifiers below
+//              define the default styling for all form field labels. 
+//
+//              The '.label--light' class should be used to for labels that are designed to not be bold.
+//
+//              The '.label--inline' class should be used for labels that are placed next to their associated input field.
+//
+//              The '.label--option' class should be used for conditionally displayed input fields.
+//  
+// ------------------------ 
+//  EXAMPLES
+// ------------------------
+//
+// <label for="firstName" class="label">First Name</label>
+// <input type="text" id="firstName" name="firstName" class="input input--txt" /> 
+//
+// http://ux.allstate.com/ux/Allstate-Style-Guide/#/components/labels
+//
+
+.label {
+    font-family: $font-bold;
+    font-weight: normal;
+}
+
+.label--normal {
+    font-family: $font-brand;
+}

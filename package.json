@@ -1,0 +1,16 @@
+{
+  "name": "starter-kit",
+  "version": "0.1.0",
+  "scripts": {},
+  "engines": {},
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.1",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-cssmin": "^0.6.2",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^0.5.3",
+    "grunt-sass": "^1.2.1",
+    "node-sass": "^3.11.1"
+  }
+}

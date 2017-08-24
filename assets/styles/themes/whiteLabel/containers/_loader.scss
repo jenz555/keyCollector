@@ -1,0 +1,156 @@
+
+$overlay: rgba(255, 255, 255, .9);
+$box-shadow: rgba(0, 0, 0, .2);
+
+$loader-xs: 1rem;
+$loader-sm: 1.5rem;
+$loader-md: 2rem;
+$loader-lg: 4rem;
+$loader-xl: 6rem;
+
+$action: #0075c9 !default;
+$alert-red: #cf102d !default;
+$yellow-light: #ffc300 !default;
+$green: #49882c !default;
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+.c-loader {
+  display: flex;
+  justify-content: center;
+  z-index: $zIndex-10;
+
+  &__icon {
+    height: $loader-md;
+    width: $loader-md;
+  }
+
+  svg {
+    @include animation(spin 1s linear infinite);
+  }
+
+  &__path {
+    animation: snake 1.5s ease-in-out infinite;
+    stroke: $black;
+    stroke-dasharray: 100,200;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    transform-origin: center center;
+  }
+
+  &--overlay {
+    align-items: center;
+    background: $overlay;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &--boxed {
+    .c-loader__icon {
+      background: $white;
+      border-radius: 50%;
+      box-shadow: 0 .2rem .2rem $box-shadow;
+    }
+  }
+
+  &--multi-color {
+    .c-loader__path {
+        @include animation(change 6s ease-in-out infinite);
+        @include animation(snake 1.5s ease-in-out infinite);
+    }
+  }
+
+  &--xs {
+    .c-loader__icon {
+      width: $loader-xs;
+      height: $loader-xs;
+    }
+    .c-loader__path {
+      stroke-width: 10;
+    }
+  }
+
+  &--sm {
+    .c-loader__icon {
+      width: $loader-sm;
+      height: $loader-sm;
+    }
+    .c-loader__path {
+      stroke-width: 8;
+    }
+  }
+
+  &--lg {
+    .c-loader__icon {
+      width: $loader-lg;
+      height: $loader-lg;
+    }
+    .c-loader__path {
+      stroke-width: 4;
+    }
+  }
+
+  &--xl {
+    .c-loader__icon {
+      width: $loader-xl;
+      height: $loader-xl;
+    }
+    .c-loader__path {
+      stroke-width: 3;
+    }
+  }
+}
+
+// 3 Animations
+// spin - rotates svg infinitely
+// snake - keyframes that morph the svg's circle path
+// change - keyframes to change the color of the path
+
+
+@include keyframes(spin) {
+ 100% {
+    transform: rotate(360deg);
+  }
+}
+
+@include keyframes(snake) {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -2.188rem;
+  }
+
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset:  -7.812rem;
+  }
+}
+
+@include keyframes(change) {
+  100%,
+  0% {
+    stroke: $action;
+  }
+
+  40% {
+    stroke: $alert-red;
+  }
+
+  65% {
+    stroke: $yellow-light;
+  }
+
+  80%,
+  90% {
+    stroke: $green;
+  }
+}

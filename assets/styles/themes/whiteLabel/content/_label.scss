@@ -1,0 +1,58 @@
+// ------------------------
+//  INFORMATION
+// ------------------------
+// Important: Do not change these core files. Any changes should be 
+//            added to a theme file. Example '/themes/txt.scss'
+// 
+// Description: the label component is used for form field lebeling. The base class 'label' and the modifiers below
+//              define the default styling for all form field labels. 
+//
+//              The '.label--light' class should be used to for labels that are designed to not be bold.
+//
+//              The '.label--inline' class should be used for labels that are placed next to their associated input field.
+//
+//              The '.label--option' class should be used for conditionally displayed input fields.
+//  
+// ------------------------ 
+//  EXAMPLES
+// ------------------------
+//
+// <label for="firstName" class="label">First Name</label>
+// <input type="text" id="firstName" name="firstName" class="input input--txt" /> 
+//
+// http://ux.allstate.com/ux/Allstate-Style-Guide/#/components/labels
+//
+//
+// ------------------------
+//  APPENDIX
+// ------------------------
+// 
+// 1. rems to fix zoom bug
+//
+
+.label {
+    display: block;
+    position: relative;
+    color: $gray-6;
+    font-weight: 700;
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+}
+
+.label--option { 
+    display: inline;
+    padding: 0.2rem 0.3rem 0.2rem 1.8rem; //[1] 
+    line-height: 2;
+    color: $gray-6;
+    cursor: pointer;
+    position: relative;
+    z-index: $zIndex-1;
+}
+
+.label--inline {
+    display: inline-block;
+} 
+
+.label--normal {
+    font-weight: normal;
+}

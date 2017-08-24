@@ -1,0 +1,176 @@
+// // ------------------------
+// //  INFORMATION
+// // ------------------------
+// // Important: Do not change these core files. Any changes should be
+// //            added to a theme file. Example '/themes/_variables.scss'
+// //
+// // Description: Global variables re-used throught SCSS files. Changing these
+// //              settings will make large changes throughout multiple SCSS files.
+// //
+// //
+// // ------------------------
+// //  EXAMPLES
+// // ------------------------
+// //
+// // .className {
+// //     color: $white;
+// // }
+// //
+// // http://ux.allstate.com/ux/Allstate-Style-Guide/#/components/colors
+// //
+// // Default body font is Allstate Sans
+// // Insert brand/other font references, for example:
+// // $font-brand: 'Avant Garde', Arial, Helvetica, sans-serif;
+// // Load fonts into font folder and create references in _fonts.scss using @font-face in themes
+// // ------------------------
+// //  APPENDIX
+// // ------------------------
+// //
+// // No developer comments
+// //
+// //
+
+// // Black & white
+$white: #ffffff;
+$black: #000000;
+
+// Blue
+$blue-1: #2a8df2;
+$blue-2: #9ae0ff;
+$blue-3: #55c8e8;
+$blue-4: #7fa3c3;
+$blue-5: #005ebd;
+$blue-6: #003e7b;
+
+$blue-7: #2d4256;
+$blue-8: #2b5277;
+$blue-9: #3d9be9;
+$blue-10: #0065b1;
+
+// Blue green
+$blue-green: #d2ebe6;
+
+// Yellow
+$yellow-1: #fdf5d1;
+$yellow-2: #ffce00;
+
+// Orange
+$orange-1: #f6a800;
+$orange-2: #ff8400;
+$orange-3: #de5c08;
+
+// Red
+$red-1: #cf102d;
+
+// Gray
+$gray-1: #f5f5f5;
+$gray-2: #ededed;
+$gray-3: #cccccc;
+$gray-4: #999999;
+$gray-5: #666666;
+$gray-6: #333333;
+
+// Cool Gray
+$cool-gray-1: #eff2f3;
+$cool-gray-2: #dfe3e6;
+$cool-gray-3: #c9d5dd;
+$cool-gray-4: #7b8e9b;
+$cool-gray-5: #5f6f79;
+$cool-gray-6: #445057;
+
+// Violet
+$violet-1: #ad06ea;
+$violet-2: #7307a0;
+
+// Green
+$green-1: #72b325;
+$green-2: #ebf5d1;
+$green-3: #49882c;
+
+// Teal
+$teal-1: #009491;
+$teal-2: #006C68;
+
+// message
+$message-blue: #daecf3;
+$message-yellow: #fdf5d1;
+$message-green: #ebf5d1;
+
+$message-blue-frame: #79c4c3; 
+$message-yellow-frame: #ffce00;
+$message-green-frame: #b2d58d;
+
+$color-link: $blue-1;
+$color-link-hover: $blue-2;
+$color-error: $red-1;
+$color-success: $green-2;
+$color-heading: $blue-1;
+$color-heading-alt: $blue-2;
+$color-text: $gray-6;
+$color-text-inverse: $white;
+$color-background: $blue-2;
+$color-btn: $orange-2;
+$color-btn-alt: $green-2;
+
+
+//----------------------------------------------------
+// Typography
+//----------------------------------------------------
+
+$font-brand: 'Montserrat-Regular', Arial, Helvectica, sans-serif;
+$font-brand-italic: 'Montserrat-RegularItalic', Arial, Helvectica, sans-serif;
+$font-brand-light: 'Montserrat-Light', Arial, Helvectica, sans-serif;
+$font-brand-light-italic: 'Montserrat-LightItalic', Arial, Helvectica, sans-serif; 
+$font-brand-medium: 'Montserrat-Medium', Arial, Helvectica, sans-serif;
+$font-brand-medium-italic: 'Montserrat-MediumItalic', Arial, Helvectica, sans-serif;
+$font-brand-bold: 'Montserrat-Bold', Arial, Helvectica, sans-serif;
+$font-brand-bold--italic: 'Montserrat-BoldItalic', Arial, Helvectica, sans-serif;
+$font-brand-black: 'Montserrat-Black', Arial, Helvectica, sans-serif;
+$font-brand-black-italic: 'Montserrat-BlackItalic', Arial, Helvectica, sans-serif;
+$font-arial: Arial, Sans-Serif;
+
+$font-sans: $font-brand;
+$font-base: $font-brand;
+
+$font-light: $font-brand-light;
+$font-normal: $font-brand;
+$font-semiBold: $font-brand-medium;
+$font-bold: $font-brand-bold;
+$font-italic: $font-brand-italic;
+
+//--------------------------
+// Base styles
+//--------------------------
+
+$supportsPixels: false;
+
+$root-fontSize: 1rem; 
+$root-fontSize-numeric: 1rem;
+
+$base-font: $font-sans;
+$base-fontSize: 1rem;
+$base-lineHeight: 1.5;
+$base-color: $gray-6;
+$base-vr: 1rem;
+$base-offest: 0.5rem;
+$base-inputHeight: 2.75rem;
+
+$site-width: 64rem;
+
+$gutter: 1rem; // Used in both grid and blocks
+
+$base-spacingUnit: 0.25rem; 
+
+
+//--------------------------
+// Heading Sizes
+//--------------------------
+
+$display-36: 36;
+$display-28: 28;
+$display-24: 24;
+$display-20: 20;
+$display-18: 18;
+$display-16: 16;
+$display-14: 14;
+$display-12: 12;

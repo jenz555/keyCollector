@@ -1,0 +1,517 @@
+//----------------------------------------------------
+// Grid
+//----------------------------------------------------
+
+/*
+ * @example"
+    <div class="grid">
+        <div class="grid__col grid__col--2of12">
+            <div class="module"></div>
+        </div>
+        <div class="grid__col grid__col--10of12">
+            <div class="module"></div>
+        </div>
+    </div>
+
+    More info available: http://ux.allstate.com/ux/Allstate-Style-Guide/#/components/grids
+ *
+ */
+
+$singleGridColWidth: 8.33%;
+
+.grid {
+    margin: (-$gutter) 0  0 (-$gutter);
+    font-size: 0; // Clear white-space
+    letter-spacing: -1rem; //Fix for Android not supporting font-sizes less than 8px
+}
+
+.grid__col {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    padding: $gutter 0 0 $gutter;
+    @include borderBox();
+    font-size: 1rem;
+    letter-spacing: 0;
+}
+
+.grid--middle > * {
+    vertical-align: middle;
+}
+
+.grid--bottom > * {
+    vertical-align: bottom;
+}
+
+.grid--centered {
+    text-align: center;
+}
+
+.grid--centered > * {
+    text-align: left;
+}
+
+.grid__col--1of12 {
+    width: 8.33%;
+}
+
+.grid__col--2of12 {
+    width: 16.66%;
+}
+
+.grid__col--3of12 {
+    width: 25%;
+}
+
+.grid__col--4of12 {
+    width: 33.33%;
+}
+
+.grid__col--5of12 {
+    width: 41.66%;
+}
+
+.grid__col--6of12 {
+    width: 50%;
+}
+
+.grid__col--7of12 {
+    width: 58.33%;
+}
+
+.grid__col--8of12 {
+    width: 66.66%;
+}
+
+.grid__col--9of12 {
+    width: 75%;
+}
+
+.grid__col--10of12 {
+    width: 83.33%;
+}
+
+.grid__col--11of12 {
+    width: 91.66%;
+}
+
+.grid__col--12of12 {
+    width: 100%;
+}
+
+.grid--collapsed {
+    margin-left: 0;
+}
+
+.grid--collapsed > * {
+    padding-left: 0;
+}
+
+.grid--equalCols {
+    width: 100%;
+    height: 100%;
+    display: table;
+    table-layout: fixed;
+    padding: 0;
+    margin: 0;
+}
+
+.grid--equalCols:before {
+    display: none;
+}
+
+.grid--equalCols > * {
+    height: 100%;
+    display: table-cell;
+    padding: 0;
+}
+
+.grid__col--isHidden {
+    display: none;
+}
+
+.grid__col--push--0 {
+    margin: 0;
+}
+
+.grid__col--push,
+.grid__col--push--1 {
+    margin-left: $singleGridColWidth;
+}
+
+.grid__col--push--2 {
+    margin-left: $singleGridColWidth * 2;
+}
+
+.grid__col--push--3 {
+    margin-left: $singleGridColWidth * 3;
+}
+
+.grid__col--push--4 {
+    margin-left: $singleGridColWidth * 4;
+}
+
+.grid__col--push--5 {
+    margin-left: $singleGridColWidth * 5;
+}
+
+.grid__col--push--6 {
+    margin-left: $singleGridColWidth * 6;
+}
+
+.grid__col--push--7 {
+    margin-left: $singleGridColWidth * 7;
+}
+
+.grid__col--push--8 {
+    margin-left: $singleGridColWidth * 8;
+}
+
+.grid__col--push--9 {
+    margin-left: $singleGridColWidth * 9;
+}
+
+.grid__col--push--10 {
+    margin-left: $singleGridColWidth * 10;
+}
+
+.grid__col--push--11 {
+    margin-left: $singleGridColWidth * 11;
+}
+
+//----------------------------------------------------
+// Media Queries
+//----------------------------------------------------
+
+@media (min-width: $breakpoint-medium) {
+    .grid__col {
+        display: inline-block;
+    }
+
+    .grid--equalCols > * {
+        display: table-cell;
+    }
+
+    .grid__col--1of12--medium {
+        width: 8.33%;
+    }
+
+    .grid__col--2of12--medium {
+        width: 16.66%;
+    }
+
+    .grid__col--3of12--medium {
+        width: 25%;
+    }
+
+    .grid__col--4of12--medium {
+        width: 33.33%;
+    }
+
+    .grid__col--5of12--medium {
+        width: 41.66%;
+    }
+
+    .grid__col--6of12--medium {
+        width: 50%;
+    }
+
+    .grid__col--7of12--medium {
+        width: 58.33%;
+    }
+
+    .grid__col--8of12--medium {
+        width: 66.66%;
+    }
+
+    .grid__col--9of12--medium {
+        width: 75%;
+    }
+
+    .grid__col--10of12--medium {
+        width: 83.33%;
+    }
+
+    .grid__col--11of12--medium {
+        width: 91.66%;
+    }
+
+    .grid__col--12of12--medium {
+        width: 100%;
+    }
+
+    .grid__col--isHidden--medium {
+        display: none;
+    }
+
+    .grid__col--push--0--medium {
+        margin: 0;
+    }
+
+    .grid__col--push--medium,
+    .grid__col--push--1--medium {
+        margin-left: $singleGridColWidth;
+    }
+
+    .grid__col--push--2--medium {
+        margin-left: $singleGridColWidth * 2;
+    }
+
+    .grid__col--push--3--medium {
+        margin-left: $singleGridColWidth * 3;
+    }
+
+    .grid__col--push--4--medium {
+        margin-left: $singleGridColWidth * 4;
+    }
+
+    .grid__col--push--5--medium {
+        margin-left: $singleGridColWidth * 5;
+    }
+
+    .grid__col--push--6--medium {
+        margin-left: $singleGridColWidth * 6;
+    }
+
+    .grid__col--push--7--medium {
+        margin-left: $singleGridColWidth * 7;
+    }
+
+    .grid__col--push--8--medium {
+        margin-left: $singleGridColWidth * 8;
+    }
+
+    .grid__col--push--9--medium {
+        margin-left: $singleGridColWidth * 9;
+    }
+
+    .grid__col--push--10--medium {
+        margin-left: $singleGridColWidth * 10;
+    }
+
+    .grid__col--push--11--medium {
+        margin-left: $singleGridColWidth * 11;
+    }
+}
+
+@media (min-width: $breakpoint-large) {
+    .grid__col {
+        display: inline-block;
+    }
+
+    .grid--equalCols > * {
+        display: table-cell;
+    }
+
+    .grid__col--1of12--large {
+        width: 8.33%;
+    }
+
+    .grid__col--2of12--large {
+        width: 16.66%;
+    }
+
+    .grid__col--3of12--large {
+        width: 25%;
+    }
+
+    .grid__col--4of12--large {
+        width: 33.33%;
+    }
+
+    .grid__col--5of12--large {
+        width: 41.66%;
+    }
+
+    .grid__col--6of12--large {
+        width: 50%;
+    }
+
+    .grid__col--7of12--large {
+        width: 58.33%;
+    }
+
+    .grid__col--8of12--large {
+        width: 66.66%;
+    }
+
+    .grid__col--9of12--large {
+        width: 75%;
+    }
+
+    .grid__col--10of12--large {
+        width: 83.33%;
+    }
+
+    .grid__col--11of12--large {
+        width: 91.66%;
+    }
+
+    .grid__col--12of12--large {
+        width: 100%;
+    }
+
+    .grid__col--isHidden--large {
+        display: none;
+    }
+
+    .grid__col--push--0--large {
+        margin: 0;
+    }
+
+    .grid__col--push--large,
+    .grid__col--push--1--large {
+        margin-left: $singleGridColWidth;
+    }
+
+    .grid__col--push--2--large {
+        margin-left: $singleGridColWidth * 2;
+    }
+
+    .grid__col--push--3--large {
+        margin-left: $singleGridColWidth * 3;
+    }
+
+    .grid__col--push--4--large {
+        margin-left: $singleGridColWidth * 4;
+    }
+
+    .grid__col--push--5--large {
+        margin-left: $singleGridColWidth * 5;
+    }
+
+    .grid__col--push--6--large {
+        margin-left: $singleGridColWidth * 6;
+    }
+
+    .grid__col--push--7--large {
+        margin-left: $singleGridColWidth * 7;
+    }
+
+    .grid__col--push--8--large {
+        margin-left: $singleGridColWidth * 8;
+    }
+
+    .grid__col--push--9--large {
+        margin-left: $singleGridColWidth * 9;
+    }
+
+    .grid__col--push--10--large {
+        margin-left: $singleGridColWidth * 10;
+    }
+
+    .grid__col--push--11--large {
+        margin-left: $singleGridColWidth * 11;
+    }
+}
+
+@media (min-width: $breakpoint-xlarge) {
+    .grid__col {
+        display: inline-block;
+    }
+
+    .grid--equalCols > * {
+        display: table-cell;
+    }
+
+    .grid__col--1of12--xlarge {
+        width: 8.33%;
+    }
+
+    .grid__col--2of12--xlarge {
+        width: 16.66%;
+    }
+
+    .grid__col--3of12--xlarge {
+        width: 25%;
+    }
+
+    .grid__col--4of12--xlarge {
+        width: 33.33%;
+    }
+
+    .grid__col--5of12--xlarge {
+        width: 41.66%;
+    }
+
+    .grid__col--6of12--xlarge {
+        width: 50%;
+    }
+
+    .grid__col--7of12--xlarge {
+        width: 58.33%;
+    }
+
+    .grid__col--8of12--xlarge {
+        width: 66.66%;
+    }
+
+    .grid__col--9of12--xlarge {
+        width: 75%;
+    }
+
+    .grid__col--10of12--xlarge {
+        width: 83.33%;
+    }
+
+    .grid__col--11of12--xlarge {
+        width: 91.66%;
+    }
+
+    .grid__col--12of12--xlarge {
+        width: 100%;
+    }
+
+    .grid__col--isHidden--xlarge {
+        display: none;
+    }
+
+    .grid__col--push--0--xlarge {
+        margin: 0;
+    }
+
+    .grid__col--push--xlarge,
+    .grid__col--push--1--xlarge {
+        margin-left: $singleGridColWidth;
+    }
+
+    .grid__col--push--2--xlarge {
+        margin-left: $singleGridColWidth * 2;
+    }
+
+    .grid__col--push--3--xlarge {
+        margin-left: $singleGridColWidth * 3;
+    }
+
+    .grid__col--push--4--xlarge {
+        margin-left: $singleGridColWidth * 4;
+    }
+
+    .grid__col--push--5--xlarge {
+        margin-left: $singleGridColWidth * 5;
+    }
+
+    .grid__col--push--6--xlarge {
+        margin-left: $singleGridColWidth * 6;
+    }
+
+    .grid__col--push--7--xlarge {
+        margin-left: $singleGridColWidth * 7;
+    }
+
+    .grid__col--push--8--xlarge {
+        margin-left: $singleGridColWidth * 8;
+    }
+
+    .grid__col--push--9--xlarge {
+        margin-left: $singleGridColWidth * 9;
+    }
+
+    .grid__col--push--10--xlarge {
+        margin-left: $singleGridColWidth * 10;
+    }
+
+    .grid__col--push--11--xlarge {
+        margin-left: $singleGridColWidth * 11;
+    }
+}

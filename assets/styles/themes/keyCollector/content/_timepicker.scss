@@ -1,0 +1,130 @@
+
+.timepicker--schedulerWrapper:before {
+	background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCA2NCA2NCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNjQgNjQiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTMyLDAuNGMtMTcuMywwLTMxLjMsMTQtMzEuMywzMS4zYzAsMTcuMywxNCwzMS4zLDMxLjMsMzEuM2MxNy4zLDAsMzEuMy0xNCwzMS4zLTMxLjNDNjMuMywxNC40LDQ5LjMsMC40LDMyLDAuNHogTTMyLDU1LjUNCgljLTEzLjIsMC0yMy44LTEwLjctMjMuOC0yMy44UzE4LjgsNy45LDMyLDcuOXMyMy44LDEwLjcsMjMuOCwyMy44UzQ1LjIsNTUuNSwzMiw1NS41eiIvPg0KPHBvbHlsaW5lIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSI3LjQ0MjMiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgcG9pbnRzPSIzMS4xLDExLjYgMzEuMSwzNi4xIDQ2LjEsMzYuMSAiLz4NCjwvc3ZnPg0K') no-repeat center center;
+	background-color: $blue-4;
+	background-size: 1.375rem;
+	@include border-radius(0 4px 4px 0);
+}
+
+[id^="timepicker--scheduler-"] .anchor {
+	font-family: $font-brand-bold;
+}
+
+.timepicker--scheduler {
+	font-family: $font-brand;
+	@include border-radius(4px 4px 4px 4px);
+}
+
+.timepicker--scheduler__header__label {
+	font-family: $font-brand-bold;
+}
+
+.timepicker--scheduler__optionModule > * {
+	color: $blue-1;
+	@include transition(all, 0.1s, linear);
+	@include border-radius(4px);
+}
+.timepicker--scheduler__optionModule[data-section] {
+	border-top: 1px solid $gray-4;
+}
+.timepicker--scheduler__optionModule[data-section]:before {
+	font-family: $font-brand-bold;
+}
+
+.timepicker--scheduler__optionModule[data-section="Time of Day"] > :first-child {
+	@include border-radius(4px 0px 0px 4px);
+}
+
+.timepicker--scheduler__optionModule[data-section="Time of Day"] > :last-child {
+	@include border-radius(0 4px 4px 0);
+}
+
+.timepicker--scheduler__optionModule > *:hover,
+.timepicker--scheduler__optionModule > .isTabbed,
+.timepicker--scheduler__optionModule > :focus,
+.timepicker--scheduler__footer .btn.isTabbed {
+	border: 1px solid $blue-1;
+}
+.timepicker--scheduler__optionModule > *.isSelected {
+	background-color: $blue-4;
+	font-family: $font-brand-bold;	
+}
+
+.timepicker--scheduler__optionModule > *.isSelected.isTabbed {
+	background-color: lighten($blue-1, 7%);
+}
+
+.timepicker--scheduler__optionModule .btn,
+.timepicker--scheduler__footer .btn {
+	@include transition(all, 0.2s, linear);
+}
+.timepicker--scheduler__footer .btn,
+.timepicker--scheduler__footer .btn:focus {
+	color: $blue-1;
+}
+.timepicker--scheduler__footer .btn {
+	display: block;
+	background-color: $white;
+	border: 1px solid $gray-4;
+}
+.timepicker--scheduler__footer .btn:hover,
+.timepicker--scheduler__optionModule[data-section="Time of Day"] > *:hover {
+	background-color: $blue-4;
+}
+
+.timepicker--scheduler__optionModule .btn:hover,
+.timepicker--scheduler__optionModule .btn.isSelected {
+	background-color: $blue-1;
+}
+.timepicker--scheduler__footer .btn[disabled],
+.timepicker--scheduler__footer .btn[disabled]:hover {
+	display: block;
+	color: $gray-3;
+	background-color: $gray-2;
+	border: 1px solid $gray-2;
+}
+
+.timepicker--scheduler .select,
+.timepicker--scheduler .select__icon,
+.timepicker--scheduler .select__icon::before {
+	height: 2.125rem;
+}
+
+.btn--setToNow {
+	color: $blue-1;
+	font-family: $font-brand-bold;
+}
+
+.timepicker--scheduler--overflow .timepicker--scheduler__header,
+.timepicker--scheduler--overflow .timepicker--scheduler__footer {
+	box-shadow: 0 10px 50px rgba(0,0,0,0.3);
+}
+
+@keyframes ScaleUpFadeIn {
+	0% {
+        opacity: 0;
+				@include transform(scale(.9, .9));
+    }
+    100% {
+        opacity: 1;
+				@include transform(scale(1, 1));
+    }
+}
+
+@keyframes ScaleDownFadeOut {
+	0% {
+        opacity: 1;
+				@include transform(scale(1, 1));
+    }
+    100% {
+        opacity: 0;
+        @include transform(scale(.9, .9));
+    }
+}
+
+@media (min-width: 376px) {
+	.timepicker--scheduler {
+		animation: ScaleUpFadeIn 0.1s ease-in;
+		@include transform(translateY(0));
+	}
+}

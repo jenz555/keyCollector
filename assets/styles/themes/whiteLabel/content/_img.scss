@@ -1,0 +1,33 @@
+// ------------------------
+//  INFORMATION
+// ------------------------
+// Important: Do not change these core files. Any changes should be 
+//            added to a theme file. Example '/themes/txt.scss'
+// 
+// Description: This img component is used to style the base class for images.  
+//  
+// ------------------------ 
+//  EXAMPLES
+// ------------------------
+//
+// <img src="assets/iamges/filename.jpg" alt="file" class="img" />
+//
+// http://ux.allstate.com/ux/Allstate-Style-Guide/#/
+//
+//
+// ------------------------
+//  APPENDIX
+// ------------------------
+// 
+
+.img {
+    display: block;
+}
+
+.img--fill {
+    width: 100%;
+}
+
+.img--middle {
+    vertical-align: middle;
+}

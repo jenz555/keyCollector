@@ -1,0 +1,42 @@
+//----------------------------------------------------
+// Flag
+//----------------------------------------------------
+
+.flag {
+    width: 100%;
+    display: table;
+    //line-height: 1; // Ensures accurate vertical centering of images and icons
+}
+
+.flag + .flag {
+    margin-top: 1rem;
+}
+
+.flag > * {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.flag--middle > * {
+    vertical-align: middle;
+}
+
+.flag--bottom > * {
+    vertical-align: bottom;
+}
+
+.flag__hd {
+    padding-right: 1rem;
+}
+
+.flag__bd {
+    width: 100%;
+}
+
+.flag__ft {
+    padding-left: 1rem;
+}
+
+.flag__img {
+    max-width: none;
+}

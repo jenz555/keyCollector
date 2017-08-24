@@ -1,0 +1,115 @@
+// // ------------------------
+// //  INFORMATION
+// // ------------------------
+// // Important: Do not change these core files. Any changes should be
+// //            added to a theme file. Example '/themes/_variables.scss'
+// //
+// // Description: Global variables re-used throught SCSS files. Changing these
+// //              settings will make large changes throughout multiple SCSS files.
+// //
+// //
+// // ------------------------
+// //  EXAMPLES
+// // ------------------------
+// //
+// // .className {
+// //     color: $white;
+// // }
+// //
+// // http://ux.allstate.com/ux/Allstate-Style-Guide/#/components/colors
+// //
+// // Default body font is Allstate Sans
+// // Insert brand/other font references, for example:
+// // $font-brand: 'Avant Garde', Arial, Helvetica, sans-serif;
+// // Load fonts into font folder and create references in _fonts.scss using @font-face in themes
+// // ------------------------
+// //  APPENDIX
+// // ------------------------
+// //
+// // No developer comments
+// //
+// //
+
+// // Black & white
+$white: #ffffff;
+$black: #000000;
+
+// Red
+$red-1: #cf102d;
+
+// Green
+$green-1: #72b325;
+
+// Gray
+$gray-1: #f5f5f5;
+$gray-2: #ededed;
+$gray-3: #cccccc;
+$gray-4: #999999;
+$gray-5: #666666;
+$gray-6: #333333;
+
+
+$color-link: $gray-4;
+$color-error: $red-1;
+$color-success: $green-1;
+$color-text: $gray-6;
+$color-text-inverse: $white;
+
+//----------------------------------------------------
+// Typography
+//----------------------------------------------------
+
+$font-arial: Arial, Sans-Serif;
+$font-sans: $font-arial;
+$font-serif: Georgia, serif;
+$font-monospace: Courier, monospace;
+$font-base: $font-arial;
+
+//--------------------------
+// Base styles
+//--------------------------
+
+$supportsPixels: false;
+
+$root-fontSize: 1rem; 
+$root-fontSize-numeric: 1rem;
+
+$base-font: $font-sans;
+$base-fontSize: 1rem;
+$base-lineHeight: 1.5;
+$base-color: $gray-6;
+$base-vr: 1rem;
+$base-offset: 0.5rem;
+$base-inputHeight: 2.75rem;
+
+$site-width: 64rem;
+
+$gutter: 1rem; // Used in both grid and blocks
+
+$base-spacingUnit: 0.25rem; 
+
+
+//--------------------------
+// Media query breakpoints
+//--------------------------
+
+$breakpoint-xsmall: 20em; // 320px
+$breakpoint-small: 34em; // 544px
+$breakpoint-medium: 48em; // 768px
+$breakpoint-large: $site-width; // 1024px
+$breakpoint-xlarge: 90em; // 1440px
+
+//--------------------------
+// zIndex
+//--------------------------
+
+$zIndex-1:   100;
+$zIndex-2:   200;
+$zIndex-3:   300;
+$zIndex-4:   400;
+$zIndex-5:   500;
+$zIndex-6:   600;
+$zIndex-7:   700;
+$zIndex-8:   800;
+$zIndex-9:   900;
+$zIndex-10: 1000;

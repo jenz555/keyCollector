@@ -1,0 +1,192 @@
+// ------------------------
+//  INFORMATION
+// ------------------------
+// Important: Do not change these core files. Any changes should be
+//            added to a theme file. Example '/themes/_dialog.scss'
+//
+// Description: Dialog modules include the background overlay as well as the dialog box
+//              that lays on top which contains relative content and action items.
+//
+//
+// ------------------------
+//  EXAMPLES
+// ------------------------
+//
+//<div class="dialogModal" id="js-ModalTarget_1" role="dialog" aria-labelledby="dialogTitle" aria-describedby="dialogDesc">
+//	<div class="dialog__wrap">
+//		<div class = "dialog__header">
+//			<a href="javascript:void(0);" class="dialog__close" onclick="$.flexDialog.close();" alt="close popup"></a>
+//		</div>
+//
+//		<div class="dialog__body" tabindex="0">
+//			<div class="dialog__body__hd">
+//				<h2 id="dialogTitle" class="hdg hdg--2">MODAL WINDOW</h4>
+//			</div>
+//
+//			<p>
+//				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+//			</p>
+//
+//			<p>
+//				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+//			</p>
+//			<p>
+//				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+//			</p>
+//		</div>
+//
+//		<div class="dialog__footer">
+//			<ul class="hList hList--inverse">
+//				<li>
+//					<button id="closePanel2" class="btn btn--ancillary" id="closePanel" onclick="$.flexDialog.close();">I got it!</button>
+//				</li>
+//			</ul>
+//		</div>
+//	</div>
+//</div>
+//
+// http://ux.allstate.com/ux/Allstate-Style-Guide/#/components/dialog
+//
+// ------------------------
+//  APPENDIX
+// ------------------------
+//
+//
+
+$dialog-width : 100%;
+
+.noScroll {
+  overflow: hidden;
+}
+
+.dialogModal {
+  position: fixed;
+  right: -100%;
+  top: 0;
+  width: $dialog-width;
+  bottom: 0;
+  padding: 0;
+  visibility: hidden;
+  z-index: $zIndex-10;
+  background-color: $white;
+  @include dropShadow(0 0 7px 0 rgba(0,0,0,.6));
+  overflow-y: auto;
+}
+
+.dialogModal--active {
+  right: 0;
+  visibility: visible;
+}
+
+.dialogNonModal {
+  position: fixed;
+  right: -100%;
+  top: 0;
+  width: $dialog-width;
+  bottom: 0;
+  padding: 0;
+  visibility: hidden;
+  z-index: $zIndex-10;
+  background-color: $white;
+  @include dropShadow(0 0 7px 0 rgba(0,0,0,.6));
+  overflow-y: auto;
+}
+
+.dialogNonModal--active {
+  right: 0;
+  visibility: visible;
+}
+
+.dialog__wrap {
+  height: 100%;
+	padding: 20px;
+  @include display-flex();
+  @include flex-direction(column);
+  @include flex-wrap();
+}
+.dialog__wrap > * {
+  @include flex();
+}
+.dialog__header {
+  height: auto;
+  padding: 0.625rem 0 1.25rem;
+}
+.dialog__close {
+  float: right;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0D%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E%0D%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%0D%0A%09%20width%3D%2219px%22%20height%3D%2219px%22%20viewBox%3D%220%200%2019%2019%22%20enable-background%3D%22new%200%200%2019%2019%22%20xml%3Aspace%3D%22preserve%22%3E%0D%0A%3Crect%20x%3D%22-2.343%22%20y%3D%228%22%20transform%3D%22matrix%280.7071%200.7071%20-0.7071%200.7071%209.5002%20-3.9347%29%22%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20fill%3D%22%23999999%22%20width%3D%2223.685%22%20height%3D%223%22/%3E%0D%0A%3Crect%20x%3D%22-2.342%22%20y%3D%228.002%22%20transform%3D%22matrix%280.7071%20-0.7071%200.7071%200.7071%20-3.9361%209.5%29%22%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20fill%3D%22%23999999%22%20width%3D%2223.685%22%20height%3D%223%22/%3E%0D%0A%3C/svg%3E%0D%0A');
+  background-repeat: no-repeat;
+  height: 19px;
+  width: 19px;
+}
+.dialog__body__hd {
+  margin-bottom: 0.5rem;
+}
+.dialog__body {
+  @include flex(2);
+  overflow: auto;
+}
+.dialog__footer {
+  margin: 35px 0 0;
+  padding: 12px 0 20px;
+  border-top: 1px solid $gray-3;
+}
+/* clickable page overlay */
+.clickableOverlay {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: $zIndex-8;
+  background-color: rgba(0,0,0,.6);
+  cursor: pointer;
+}
+
+.clickableOverlay--active {
+  visibility: visible;
+}
+
+.clickableOverlay--transparent {
+  background-color: transparent;
+
+}
+
+//----------------------------------------------------
+// Media Queries
+//----------------------------------------------------
+
+@media (min-width: $breakpoint-medium) {
+
+	.dialogModal {
+		position: fixed;
+		top: 20%;
+		left: 50%;
+		width: 40%;
+		max-width: 80%;
+		bottom: auto;
+		height: auto;
+		max-height: 80%;
+		z-index: $zIndex-9;
+		visibility: hidden;
+		opacity: 0;
+    @include transform(translateX(-50%) translateY(-50%));
+    @include dropShadow(0 0 7px 0 rgba(0,0,0,.6));
+		transform-origin: top left;
+	}
+
+	.dialogModal--active {
+		visibility: visible;
+		opacity: 1;
+    top: 50%;
+	}
+
+	.dialogNonModal {
+		width: 45%;
+	}
+
+  .dialog__wrap {
+    display: block;
+  }
+
+}

@@ -1,0 +1,129 @@
+// ------------------------
+//  INFORMATION
+// ------------------------
+// Important: Do not change these core files. Any changes should be
+//            added to a theme file. Example '/themes/_base.scss'
+//
+// Description: Our base HTML elements.
+//
+//
+// ------------------------
+//  APPENDIX
+// ------------------------
+//
+// 1. Enables kerning and optional ligatures.
+// 2. Disables subpixel-rendering and smooths the font on the level of the pixel
+//
+
+*,
+*:before,
+*:after {
+    @include borderBox();
+}
+
+html {
+    height: 100%;
+    font-size: $root-fontSize;
+    text-rendering: optimizeLegibility; // [1]
+    -webkit-font-smoothing: antialiased; // [2]
+}
+
+body {
+    height: 100%;
+    background-color: $white;
+    font-size: $base-fontSize;
+    font-family: $font-base;
+    line-height: $base-lineHeight;
+    overflow-x: hidden;
+}
+
+hr {
+    height: 1px;
+    margin: 2.5rem 0;
+    padding: 0;
+    background-color: $gray-4;
+}
+
+.hr--dashed {
+  color: transparent;
+  height: auto;
+  background-color: transparent;
+  border-top: 1px dashed $gray-4;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+p {
+     margin-bottom: 1rem;
+}
+
+strong,
+b {
+    font-weight: bold;
+}
+
+sup {
+    vertical-align: top;
+}
+
+code {
+    background-color: $gray-1;
+    padding: 0.2rem 0.3rem;
+    font-family: $font-monospace;
+}
+
+dl dt {
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+}
+
+h1 {
+    font-size: 2rem;
+    line-height:1.2;
+}
+
+h2 {
+    font-size: 1.625rem;
+    line-height:1.2;
+}
+
+h3 {
+    font-size: 1.25rem;
+    line-height:1.2;
+}
+
+h4 {
+	font-size: 1rem;
+    line-height:1.4;
+}
+
+h5 {
+    font-size: 0.875rem;
+    line-height:1.4;
+}
+
+h6 {
+    font-size: 0.75rem;
+    line-height:1.4;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    cursor:pointer;
+}

@@ -1,0 +1,17 @@
+.c-progress-bar {
+
+  progress {
+
+    &::-moz-progress-bar {
+      background: $blue-1;
+    }
+
+    &::-webkit-progress-value {
+      background: $blue-1;
+    }
+
+    &::-ms-fill {
+      background: $blue-1;
+    }
+  }
+}

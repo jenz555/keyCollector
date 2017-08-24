@@ -1,0 +1,16 @@
+.c-accordion {
+
+  &__header {
+    @include transition(all, .2s, ease-in-out);
+  }
+
+  &__header:before {
+    background: center center no-repeat url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4NCiAgPHBhdGggZmlsbD0iIzE2NjZhZiIgZD0iTTgwLjMsNDguM0wzMi44LDAuOGMtMC45LTAuOS0yLjQtMC45LTMuMywwbC05LjgsOS44Yy0wLjksMC45LTAuOSwyLjQsMCwzLjNsMzYsMzYuMWwtMzYsMzYuMWMtMC45LDAuOS0wLjksMi40LDAsMy4zbDkuOCw5LjhjMC45LDAuOSwyLjQsMC45LDMuMywwbDQ3LjUtNDcuNWMwLjUtMC41LDAuNy0xLjEsMC43LTEuN1M4MC44LDQ4LjgsODAuMyw0OC4zeiIvPg0KPC9zdmc+DQo=');
+  }
+
+  &__input:checked ~ &__header,
+  &__input:checked ~ &__header:hover  {
+    font-family: $font-brand-bold;
+    font-weight: normal;
+  }
+}

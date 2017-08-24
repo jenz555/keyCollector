@@ -1,0 +1,36 @@
+.c-avatar {
+  display: inline-block;
+
+  &__image {
+    border: 2px solid $gray-3;
+    border-radius: 50%;
+    height: 2rem;
+    margin: 5px;
+    overflow: hidden;
+    width: 2rem;
+
+    &--small,
+    &--sm {
+      height: 1.12rem;
+      width: 1.12rem;
+    }
+
+    &--medium,
+    &--md {
+      height: 3.125rem;
+      width: 3.125rem;
+    }
+
+    &--large,
+    &--lg {
+      height: 6.25rem;
+      width: 6.25rem;
+    }
+
+    &--xlarge,
+    &--xl {
+      height: 12.5rem;
+      width: 12.5rem;
+    }
+  }
+}

@@ -1,0 +1,93 @@
+// ------------------------
+//  INFORMATION
+// ------------------------
+// Important: Do not change these core files. Any changes should be
+//            added to a theme file. Example '/themes/_dialog.scss'
+//
+// Description: Dialog modules include the background overlay as well as the dialog box
+//              that lays on top which contains relative content and action items.
+//
+//
+// ------------------------
+//  EXAMPLES
+// ------------------------
+//
+//<div class="dialogModal" id="js-ModalTarget_1" role="dialog" aria-labelledby="dialogTitle" aria-describedby="dialogDesc">
+//	<div class="dialog__wrap">
+//		<div class = "dialog__header">
+//			<a href="javascript:void(0);" class="dialog__close" onclick="$.flexDialog.close();" alt="close popup"></a>
+//		</div>
+//
+//		<div class="dialog__body" tabindex="0">
+//			<div class="dialog__body__hd">
+//				<h2 id="dialogTitle" class="hdg hdg--2">MODAL WINDOW</h4>
+//			</div>
+//
+//			<p>
+//				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+//			</p>
+//
+//			<p>
+//				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+//			</p>
+//			<p>
+//				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+//			</p>
+//		</div>
+//
+//		<div class="dialog__footer">
+//			<ul class="hList hList--inverse">
+//				<li>
+//					<button id="closePanel2" class="btn btn--ancillary" id="closePanel" onclick="$.flexDialog.close();">I got it!</button>
+//				</li>
+//			</ul>
+//		</div>
+//	</div>
+//</div>
+//
+// http://ux.allstate.com/ux/Allstate-Style-Guide/#/components/dialog
+//
+// ------------------------
+//  APPENDIX
+// ------------------------
+//
+//
+
+$dialog-transition-speed : 0.5s;
+
+.dialogModal {
+  -webkit-transition: all $dialog-transition-speed;
+  transition: all $dialog-transition-speed;
+}
+
+.dialogNonModal {
+  -webkit-transition: all $dialog-transition-speed;
+  transition: all $dialog-transition-speed;
+}
+
+.clickableOverlay {
+  background: rgba(0,12,23,.65);
+}
+.clickableOverlay--active {
+  visibility: visible;
+}
+
+.clickableOverlay--transparent {
+  background-color: transparent;
+}
+
+//----------------------------------------------------
+// Media Queries
+//----------------------------------------------------
+
+@media (min-width: $breakpoint-medium) {
+
+	$dialog-transition-speed : 0.3s;
+
+	.dialogModal--active {
+		-webkit-transition: all $dialog-transition-speed;
+		-moz-transition: all $dialog-transition-speed;
+		transition: all $dialog-transition-speed;
+	}
+
+}

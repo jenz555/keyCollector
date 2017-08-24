@@ -1,0 +1,47 @@
+// ------------------------
+//  INFORMATION
+// ------------------------
+// Important: Do not change these core files. Any changes should be 
+//            added to a theme file. Example '/themes/_wrapper.less' 
+// 
+// Description: Wrappers contain any content or modules that are required to be as wide as a large display
+//              and centered on the screen. However, when viewed on a mobile device, the content inside
+//              spans the entire width of the device with spacing on the sides for proper visual alignment.
+//
+//
+// ------------------------ 
+//  EXAMPLES
+// ------------------------
+//
+//  <div class="wrapper">
+//      Content or other modules go here.
+//  </div>
+//
+//  http://ux.allstate.com/ux/Allstate-Style-Guide/#/components/wrappers
+//
+// ------------------------
+//  APPENDIX
+// ------------------------
+// 
+//
+//
+ 
+.wrapper {
+    width: 100%;
+    padding-right: 1rem;
+    position: relative;
+    @include borderBox();
+}
+
+
+
+//----------------------------------------------------
+// Media Queries
+//----------------------------------------------------
+@media (min-width: $breakpoint-large) {
+    .wrapper {
+        max-width: $site-width;
+        margin: 0 auto;
+        padding: 0;
+    }    
+}

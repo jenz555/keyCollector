@@ -1,0 +1,146 @@
+//----------------------------------------------------
+// Calendar
+//----------------------------------------------------
+
+.calendar {
+    @include borderBox();
+    width: 100%;
+    background: $gray-1;
+    border: 4px solid darken($gray-1, 5%);
+    margin: 10px 0;
+    padding: 18px 15px 24px;
+    position: absolute;
+    z-index: $zIndex-2;
+}
+
+div#month-wrap {
+   @include clearfix();
+   margin-bottom: 8px;
+}
+
+.calendar__btn--prev,
+.calendar__btn--next {
+    @include borderBox();
+    margin: 3px 0;
+    padding: 0;
+    border: 0;
+    width: 4%;
+    height: 20px;
+    text-indent: -9999px;
+    font-size: 0;
+    background-color: transparent;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0D%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2016.0.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0D%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E%0D%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%0D%0A%09%20width%3D%2211px%22%20height%3D%2218px%22%20viewBox%3D%220%200%2011%2018%22%20enable-background%3D%22new%200%200%2011%2018%22%20xml%3Aspace%3D%22preserve%22%3E%0D%0A%3Cg%3E%0D%0A%09%3Cg%3E%0D%0A%09%09%3Cpolygon%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20fill%3D%22%23CCCCCC%22%20points%3D%2211%2C9%209.075%2C7.091%209.075%2C7.091%201.925%2C0%200%2C1.91%207.149%2C9%20%0D%0A%09%09%090%2C16.092%201.925%2C18%209.074%2C10.91%209.075%2C10.91%20%09%09%22/%3E%0D%0A%09%3C/g%3E%0D%0A%3C/g%3E%0D%0A%3C/svg%3E%0D%0A');
+	 background-repeat: no-repeat;
+}
+
+.calendar__btn--prev {
+   float: left;
+    @include transform(rotate(180deg));
+    background-position: 0px 2px;
+}
+
+.calendar__btn--next {
+   float: right;
+}
+
+.calendar__month {
+   @include borderBox();
+   float: left;
+   width: 92%;
+   padding-top: 5px;
+   text-align: center;
+   font-size: 1rem;
+}
+
+.calendar__table {
+   width: 100%;
+   text-align: center;
+   border-collapse: separate;
+}
+
+.calendar__table:focus {
+    outline: none;
+}
+
+.calendar__table th,
+.calendar__table td {
+   width: 31px;
+   height: 35px;
+   padding: 0;
+}
+
+.calendar__table th {
+    height: auto;
+}
+
+.calendar__table td {
+   border: 1px solid transparent;
+   font-size: 0.875rem;
+   color: $gray-6;
+   vertical-align: middle;
+}
+
+.calendar__table td:hover,
+.calendar__table td.focus {
+    border-color: $gray-5;
+    background: $gray-5;
+    cursor: pointer;
+    color: $white;
+}
+
+.calendar__table td.empty {
+   border: 1px solid transparent;
+}
+
+.calendar__table td.empty:hover {
+    cursor: pointer;
+}
+
+.calendar__table td.empty:hover {
+    background: none;
+}
+
+.calendar__table__weekdays th {
+    text-transform: uppercase;
+    font-size: 0.74rem;
+}
+
+.calendar[aria-hidden="true"] {
+   display: none;
+}
+
+.calendar__table td.today {
+    border: 1px solid $gray-6;
+    font-weight: bold;
+    background: none;
+    color: $gray-5;
+}
+
+.calendar__table td.today:hover {
+    background-color: $black;
+    color: $white;
+}
+
+.calendar__table td.inactiveDay {
+    color: $gray-3;
+}
+
+.calendar__table td.inactiveDay:hover,
+.calendar__table td.inactiveDay.focus {
+    background: none;
+    border: 0;
+    color: $gray-5;
+}
+
+.calendar__table td.dueDate {
+    background-color: $gray-2;
+    border: 1px solid $gray-2;
+}
+
+//----------------------------------------------------
+// Calendar -- Small Screens
+//----------------------------------------------------
+
+.calendar {
+    width: 282px;
+}

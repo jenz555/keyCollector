@@ -1,0 +1,108 @@
+// ------------------------
+//  INFORMATION
+// ------------------------
+// Important: Do not change these core files. Any changes should be 
+//            added to a theme file. Example '/themes/btnGroup.scss' 
+// 
+// Description: This button Group component is used to create a grouping of buttons where only one can be selected at any given time.  
+//  
+// ------------------------ 
+//  EXAMPLES
+// ------------------------
+//
+//    <div class="toggleBtnGroup">
+//        <div class="toggleButton__button">
+//            <input class="toggleButton__radio" type="radio" name="toggle" id="toggle">
+//            <label class="toggleButton__label" for="toggle">Your Total Value</label>
+//        </div>
+//    </div>
+//
+// http://ux.allstate.com/ux/Allstate-Style-Guide/#/components/button-group
+//
+//
+// ------------------------
+//  APPENDIX
+// ------------------------
+// 
+//
+
+.btnGroup {
+    display: inline-block;
+    font-size: 0;
+}
+
+.btnGroup > * {
+    font-size:  0.875rem;
+    display: inline-block;
+    min-height: 0.25rem;
+    margin: 0;
+}
+
+.btnGroup * + * {
+    border-left: 1px solid $gray-3;
+}
+
+.btnGroup__button:first-child > .btnGroup__label {
+    @include border-radius(4px 0 0 4px);
+
+    border-left: 1px solid $gray-3;
+}
+.btnGroup__button:last-child > .btnGroup__label {
+    @include border-radius(0 4px 4px 0);
+    border-right: 1px solid $gray-3;
+}
+
+.btnGroup__label {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: $font-brand;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    border: 0;
+    margin: 0;
+    cursor: pointer;
+    overflow: visible;
+    padding: 0.5625rem 1.25rem;
+    border-top: 1px solid $gray-3;
+    border-bottom: 1px solid $gray-3;
+    background-color: $white;
+    color: $gray-6;
+    @include transition(all, .16s, linear);
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: $blue-1;
+        color: $white;
+    }
+}
+
+.btnGroup__radio {
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+}
+
+.btnGroup__radio:focus + .btnGroup__label {
+    background-color: $blue-1;
+    color: $white;
+}
+
+.btnGroup__label:hover:before {
+    background-color: $blue-1;
+    color: $white;
+}
+
+.btnGroup__radio:checked + .btnGroup__label {
+    background-color: $blue-1;
+    color: $white;
+}
+
+.btnGroup__radio:checked:hover + .btnGroup__label {
+    background-color: $white;
+    color: $blue-1;
+}

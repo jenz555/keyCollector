@@ -1,0 +1,181 @@
+// ------------------------
+//  INFORMATION
+// ------------------------
+// Important: Do not change these core files. Any changes should be
+//            added to a theme file. Example '/themes/txt.scss'
+//
+// Description: These input components are used for form field elements. The base class 'input' and the modifiers below
+//              will style text fields, numeric fields, and currency fields. For radio buttons and checkboxs please check
+//              the _options.less file.
+//
+//              There are various state and size modifiers for input fields these modifiying classes are marked by the appendix.
+//              the input state modifiers should be used to
+//
+// ------------------------
+//  EXAMPLES
+// ------------------------
+//
+//   text input
+//   ----------
+//   <input id="textField" class="input input--txt" type="text">
+//
+//   numeric input
+//   ------------
+//   <input type="number" val="" class="input input--number" />
+//
+//   currency input
+//   --------------
+//   <div class="input--currency">
+//       <input type="number" val="" class="input input--number" />
+//   </div>
+//
+//   affix input
+//   --------------
+//   <div class="affix affix">
+//      <div class="affix__icon">$</div>
+//      <input class="affix__input input input--number" type="number" value="" />
+//   </div>
+//
+// http://ux.allstate.com/ux/Allstate-Style-Guide/#/components/inputs
+//
+//
+// ------------------------
+//  APPENDIX
+// ------------------------
+//
+// 1. field size modifiers
+// 2. field state modifiers
+// 3. remove 'x' icon for IE 11
+// 4. resolves iOS inverted box shadow on input
+//
+
+.input {
+    width: 100%;
+    height: $base-inputHeight;
+    display: block;
+    margin: 0;
+    padding: 0 0.75rem;
+    border: 1px solid $gray-4;
+    color: $gray-5;
+    font-size: $base-fontSize;
+    cursor: auto;
+    -webkit-appearance: none; //[4]
+}
+
+.input::-ms-clear {
+    display: none; //[3]
+}
+
+.input:focus {
+    outline: 0;
+}
+
+.input::-webkit-input-placeholder {
+   color: $gray-3;
+}
+
+.input:-moz-placeholder { /* Firefox 18- */
+   color: $gray-3;
+}
+
+.input::-moz-placeholder {  /* Firefox 19+ */
+   color: $gray-3;
+}
+
+.input:-ms-input-placeholder {  /* IE */
+   color: $gray-3;
+}
+
+.input--textarea {
+    min-height: 6.25rem;
+    padding: 0.75rem;
+    overflow: auto;
+    resize: none;
+}
+
+.input--currency {
+    width: 9.5rem;
+    position: relative;
+}
+
+.input--currency > * {
+    margin-left: 1.563rem;
+}
+
+.input--currency:before {
+    content: '$';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: $zIndex-1;
+    font-weight: 700;
+    line-height: 2.5;
+    text-align: center;
+}
+
+.input--number::-webkit-outer-spin-button,
+.input--number::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input--number {
+    -moz-appearance: textfield;
+}
+
+
+//----------------------------------------------------
+// [1] Size extensions
+//----------------------------------------------------
+
+.input--lg {
+    width: 100%;
+}
+
+.input--med {
+    width: 48%;
+}
+
+.input--sm {
+    width: 30%;
+}
+
+.input--ssn {
+    width: 7.563rem;
+}
+
+.input--micro {
+    width: 6.25rem;
+}
+
+//----------------------------------------------------
+// [2] Input states
+//----------------------------------------------------
+
+.input--hasError,
+.has-error .input {
+    border: 2px solid $color-error;
+}
+
+.input--hasError:focus,
+.has-error .input:focus {
+    border-color: $color-error;
+}
+
+.input--hasSuccess,
+.has-hasSuccess .input {
+    border: 2px solid $green-1;
+}
+
+.input--hasSuccess:focus,
+.has-hasSuccess .input:focus {
+    border-color: $green-1;
+}
+
+.input[disabled],
+.input[disabled]:hover{
+    background: $gray-1;
+    color: $gray-3;
+    opacity: 1;
+}

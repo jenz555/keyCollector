@@ -1,0 +1,16 @@
+// // ------------------------------------
+// // Header
+// // -----------------------------------
+
+.responsive__header {
+    //@include radial-gradient($blue-8,$blue-9);
+    background-color: $blue-10;
+}
+
+.responsive__header--divider {
+    border-right: 1px solid $blue-3;
+}
+
+.hamburger__container {
+    border: 1px solid $blue-1;
+}

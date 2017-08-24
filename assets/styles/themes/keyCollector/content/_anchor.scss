@@ -1,0 +1,35 @@
+// ------------------------
+//  INFORMATION
+// ------------------------
+// Important: Do not change these core files. Any changes should be
+//            added to a theme file. Example '/themes/anchor.scss'
+//
+// Description: This anchor component is used to style <a> tags being used to link to other content on the same html page or view.
+//
+//
+// ------------------------
+//  EXAMPLES
+// ------------------------
+//
+// <a href="#goTo" clsas="anchor">Details</a>
+//
+// http://ux.allstate.com/ux/Allstate-Style-Guide/#/
+//
+//
+// ------------------------
+//  APPENDIX
+// ------------------------
+//
+
+.anchor {
+    color: $color-link;
+}
+
+.anchor:hover {
+    text-decoration: underline;
+}
+
+.anchor--underline,
+.anchor--underline:hover {
+  text-decoration: underline;
+}

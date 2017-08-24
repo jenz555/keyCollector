@@ -1,0 +1,13 @@
+//----------------------------------------------------
+// Page - CSS sticky footer
+//----------------------------------------------------
+
+.page {
+  @include display-flex();
+  @include flex-direction(column);
+  height: 100%;
+}
+
+.page__body {
+  @include flex-grow(1);
+}

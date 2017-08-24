@@ -1,0 +1,155 @@
+// ------------------------
+//  INFORMATION
+// ------------------------
+// Important: Do not change these core files. Any changes should be
+//            added to a theme file. Example '/themes/_utilities.scss'
+//
+// Description: Common components used throught a responsive web workflow.
+//
+//
+// ------------------------
+//  EXAMPLES
+// ------------------------
+//
+// <div class="isHidden"></div>
+//
+// http://ux.allstate.com/ux/Allstate-Style-Guide/#/components/responsive-utilities
+//
+//
+// ------------------------
+//  APPENDIX
+// ------------------------
+//
+// No developer specific notes
+//
+//
+
+//-----------------------------------------------------------------------------
+// Hide visually, hide from screen readers, and hide from the layout
+//-----------------------------------------------------------------------------
+.noScroll {
+  overflow: hidden;
+}
+
+.isHidden {
+    display: none;
+}
+
+.isVisible,
+.isVisible--block {
+    display: block;
+}
+
+.isVisible--inline {
+    display: inline;
+}
+
+.isVisible--inlineBlock {
+    display: inline-block;
+}
+
+.isVisible--tableCell {
+    display: table-cell;
+}
+
+//-----------------------------------------------------------------------------
+// Hide visually, but have it available for screen readers:
+// http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+//-----------------------------------------------------------------------------
+.isVisuallyHidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+[disabled],
+.disabled,
+[disabled]:hover,
+.disabled:hover {
+    text-decoration: none;
+    cursor: default;
+	opacity: 0.5;
+}
+
+//----------------------------------------------------
+// Media Queries
+//----------------------------------------------------
+
+@media (min-width: $breakpoint-medium) {
+    .isHidden--medium { display: none; }
+
+    .isVisible--medium,
+    .isVisible--block--medium { display: block; }
+
+    .isVisible--inline--medium { display: inline; }
+
+    .isVisible--inline-block--medium { display: inline-block; }
+
+    .isVisible--tableCell--medium { display: table-cell; }
+
+    .isVisuallyHidden--medium { visibility: hidden; }
+
+    .isVisuallyVisible--medium { visibility: visible; }
+
+
+}
+
+@media (min-width: $breakpoint-large) {
+    .isHidden--large { display: none; }
+
+    .isVisible--large,
+    .isVisible--block--large { display: block; }
+
+    .isVisible--inline--large { display: inline; }
+
+    .isVisible--inline-block--large { display: inline-block; }
+
+    .isVisible--tableCell--large { display: table-cell; }
+
+    .isVisuallyHidden--large { visibility: hidden; }
+
+    .isVisuallyVisible--large { visibility: visible; }
+
+	.isDesktopHidden {
+		display: none;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+		position: absolute;
+	}
+
+
+	.isVisuallyHiddenDesktop {
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+		position: absolute;
+	}
+}
+
+@media (min-width: $breakpoint-xlarge) {
+    .isHidden--xlarge { display: none; }
+
+    .isVisible--xlarge,
+    .isVisible--block--xlarge { display: block; }
+
+    .isVisible--inline--xlarge { display: inline; }
+
+    .isVisible--inline-block--xlarge { display: inline-block; }
+
+    .isVisible--tableCell--xlarge { display: table-cell; }
+
+    .isVisuallyHidden--xlarge { visibility: hidden; }
+
+    .isVisuallyVisible--xlarge { visibility: visible; }
+}
