@@ -3,4 +3,5 @@ assets/images/PSDs
 assets/images/content
 assets/images/**/*.tiff
 assets/images/**/*.jpeg
+**/*.psd
 

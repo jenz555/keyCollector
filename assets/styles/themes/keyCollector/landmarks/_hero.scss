@@ -1,3 +1,63 @@
+.jumbotron {
+    width: 100%;
+    //position: relative;
+    width: 100%;
+    background-image: url(../images/appBackground.png);
+    height: 300px;
+    padding: 1rem 0;
+}
+
+
+.jumbotron--hero--container {
+    position: relative;
+}
+
+.jumbotron--heroMan {
+    position: absolute;
+    opacity: 0;
+    background-image: url(../images/heroMan.png);
+    width: 30%;
+    bottom: -1rem;
+    right: 0px;
+    z-index: $zIndex-2;
+    @include animation(fadeInLeft 2.0s forwards);
+    @include keyframes(fadeInLeft) {
+        from {
+            opacity: 0;
+           // transform: translate3d(600px, 0, 0);
+        }
+        to {
+            opacity: 1;
+            transform: none;
+        }
+    }
+}
+
+
+.jumbotron--heroManKey {
+    position: absolute;
+    opacity: 0;
+    background-image: url(../images/heroManKey.png);
+    width: 30%;
+    bottom: -1rem;
+    right: 0px;
+    z-index: $zIndex-3;
+    @include animation(fadeIn 2.0s forwards);
+    @include keyframes(fadeIn) {
+        from {
+            opacity: 0;
+            transform: none;
+        }
+        to {
+            opacity: 1;
+            transform: none;
+        }
+    }
+    @include animationDelay(2.0s);
+}
+
+
+
 .hero {
     width: 100%;
     position: relative;
