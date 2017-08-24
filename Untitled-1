@@ -125,3 +125,58 @@
       </div>
     </div>
     <!-- END HEADER -->
+
+
+
+
+              <!-- START CONTACT FORM -->
+             <section id="section--3">
+              <div class="wrapper">
+                  <h2 class="txt  txt--size-36  txt--color-brand--6 txt--weight-bold vr">We would love to hear
+                      from you!</h2>
+                    
+
+                  <div class="grid grid__centered">
+                      <div class="grid__col grid__col--12of12 grid__col--6of12--medium" id="fullName">
+                          <label for="fName" class="label">Full Name</label>
+                          <input id="fName" name="" placeholder="Enter Full Name" class="input vr--x2" type="text">
+
+
+                      </div>
+                      <div class="grid__col grid__col--12of12 grid__col--6of12--medium" id="email">
+                          <label for="eAddress" class="label">Email</label>
+                          <input id="emailAddress" placeholder="Enter Email" class="input vr--x2" type="text">
+
+                      </div>
+
+                  </div>
+
+                  <div class="grid grid__centered vr">
+
+                      <div class="grid__col grid__col--12of12" id="textarea">
+                          <label for="message" class="label">Message</label>
+                          <textarea name="message" id="message" class="input--textarea"></textarea>
+                      </div>
+
+
+                  </div>
+
+                  <div class="grid grid__centered vr--x2">
+
+                      <div class="grid__col grid__col--12of12">
+
+                          <ul class="split">
+                              <li>
+                              </li>
+                              <li> <input type="submit" value="Submit" class="btn btn--block" />
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+
+
+
+
+              </div>
+          </section>
+          <!-- END CONTACT FORM -->
