@@ -11,7 +11,6 @@
   <meta name="author" content="Key Collector">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="assets/styles/app.min.css">
-  <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,700,700i" rel="stylesheet"> -->
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
@@ -52,11 +51,15 @@
             <!-- Horizontal Navigation List -->
             <div class="flag__ft txt--align-right">
               <div class="isHidden isVisible--medium">
-                <nav role="navigation">
-                  <ul class="hList navMenu--horz">
-                    <li><a class="nav__link" href="#">FAQs</a></li>
-                  </ul>
-                </nav>
+                <!-- <nav role="navigation">
+                 <ul id="toggle-nav-1" class="header__mobileUtil">
+                  <li>
+                    <button class="hamburger__container">
+                    <span id="hamburger-1" class="hamburger__navicon"></span>Menu
+                    </button>
+                  </li>
+                </ul>
+                </nav> -->
               </div>
               <div class="isHidden--medium">
                 <ul id="toggle-nav-1" class="header__mobileUtil">
@@ -76,15 +79,15 @@
                 <nav role="navigation">
                   <ul class="vList vList--piped navMenu--vert">
   
-                    <li><a class="nav__link" href="#">FAQs</a></li>
+                    <li><a class="nav__link nav--inpage--item" data-target="#section--1|-40">What is a Key Issue?</a></li>
+                    <li><a class="nav__link nav--inpage--item" data-target="#section--2|-40">Explore the App</a></li>
+                    <li><a class="nav__link nav--inpage--item" data-target="#section--3|-40">Contact</a></li>
                   </ul>
                 </nav>
               </div>
             </div>
           </div>
         </div>
-  
-  
 
 
     <div role="main">
@@ -162,13 +165,37 @@
                         <p>One of the biggest problems facing collectors today is identifying and finding these highly sought
                             after comics. Even expert collector's find it challenging to remember each and every key
                             plus the pricing based on condition.</p>
-                        <p>A key issue comic book contains a first appearance, origin, death, debut of a notable artis or
+                        <p>A key issue comic book contains a first appearance, origin, death, debut of a notable artist or
                             writer, a beloved storyline and many other instances that are especially desireable to collectors.
-                            There are quite a few more categores than the examples to the right.</p>
+                            There are quite a few more categories than the examples shown.</p>
                     </div>
-
+                   
                     <div class="grid__col grid__col--6of12--medium">
-                        <img class="img img--fill" src="assets/images/keyIssue_cover.png" alt="Key Issue">
+                      <div class="vr"></div>
+                      <h4 class="txt--align-center txt--weight-medium txt--brand">Key Issue Category Examples</h4>
+                      
+                      <section class="regular slider">
+                        <div>
+                         
+                          <img src="assets/images/mutants_comic.jpg">
+                         <div class="txt txt--align-center">1st Deadpool</div>
+                        </div>
+                      
+                        <div>
+                          <img src="assets/images/silverSurfer_comic.jpg">
+                          <div class="txt txt--align-center">Iconic Cover</div>
+                        </div>
+                        <div>
+                          <img src="assets/images/deathOfRobin_comic.jpg">
+                          <div class="txt txt--align-center"> Death of Robin</div>
+                        </div>
+                        <div>
+                          <img src="assets/images/braniac_comic.jpg">
+                          <div class="txt txt--align-center">Recalled Cover</div>
+                        </div>
+                       
+                      </section>
+                        
                     </div>
                 </div>
             </div>
@@ -185,6 +212,9 @@
               </div>
             </div>
             <section id="section--2">
+              <!-- Start Desktop View -->
+              <div class="isHidden isVisible--medium">
+
               <div class="wrapper">
             <h2 class="txt txt--size-36 txt--color-brand--6 txt--weight-bold vr  padding--t1">Explore the App</h2>
               </div>
@@ -217,7 +247,7 @@
                         <div class="grid__col grid__col--5of12--medium">
                            
                             <div class="wrapper__phone">
-                                <img class="img" src="assets/images/searchScreen_phone.png" alt="Search Screen">
+                                <img class="img" src="assets/images/tacticalCombat_phone.png" alt="Search Screen">
                               </div>
                           
                                                   
@@ -243,7 +273,7 @@
 
                         <div class="grid__col grid__col--5of12--medium txt--align-center">
                           <div class="wrapper__phone">
-                            <img class="img" src="assets/images/searchScreen_phone.png" alt="Search Screen">
+                            <img class="img" src="assets/images/superHuman_phone.png" alt="Search Screen">
 
                           </div>
                                                   
@@ -255,7 +285,7 @@
                         <div class="grid__col grid__col--5of12--medium">
                            
                             <div class="wrapper__phone">
-                                <img class="img" src="assets/images/searchScreen_phone.png" alt="Search Screen">
+                                <img class="img" src="assets/images/legendary_phone.png" alt="Search Screen">
     
                               </div>
                           
@@ -268,34 +298,108 @@
                          
                                                   
                         </div>
+                    </div>                   
                     </div>
-                    
+                  
+                </div> 
+              </div>
+               <!-- End Desktop View -->
 
-                    
-                      
-                    </div>
-                    <!-- <div class="flexbox--container">
-                        <div class="item--sidebar--container">
-                            <h2 class="txt txt--color-white txt--weight-bold">Search by Title or Character</h2>
-                            <p class="txt txt--color-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                laboris nisi ut aliquip ex ea commodo consequat. </p>
+               <!-- Start Mobile View -->
+               <div class="isHidden--medium">
+                  <div class="wrapper">
+                      <h2 class="txt txt--size-36 txt--color-brand--6 txt--weight-bold vr  padding--t1">Explore the App</h2>
+                        </div>
+                        <div class="box--dkBlue vr">
+
+                            <div class="wrapper vr--x2">
+                                <div class="vr--x2">
+                                    <h1 class="txt txt--color-white txt--align-center txt--weight-bold padding--t1"><i class="fa fa-bolt fa-rotate-90 txt--color-yellow" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;AND NOW THE POWER IS YOURS!&nbsp;&nbsp;&nbsp;<i class="fa fa-bolt fa-rotate-270 txt--color-yellow" aria-hidden="true"></i></h1>
+                                  </div>
+
+                                  <div class="grid grid--middle">
+                                      <div class="grid__col">
+
+                                           <h2 class="txt txt--color-white txt--weight-bold">Infinite Knowledge</h2>
+                                           <p class="txt txt--color-white">Search by Title or Character - 8,000 issues extracted from over 8 decades of comic book history.</p>
+                                                                 
+                                       </div>
+                                       <div class="grid__col">
+                                          <div class="wrapper__phone">
+                                              <img class="img" src="assets/images/searchScreen_phone.png" alt="Search Screen">
+                  
+                                            </div>
+                                       </div>
+ 
+                                  </div>
+                                  <hr class="hr--white">
+
+                                  <div class="grid grid--middle">
+                                      <div class="grid__col">
+
+                                           <h2 class="txt txt--color-white txt--weight-bold">Tactical Combat</h2>
+                                           <p class="txt txt--color-white">A simplified price guide to confidently decide whether to engage or retreat.</p>
+                                                                 
+                                       </div>
+                                       <div class="grid__col">
+                                          <div class="wrapper__phone">
+                                              <img class="img" src="assets/images/tacticalCombat_phone.png" alt="Tactical Combat">
+                  
+                                            </div>
+                                       </div>
+ 
+                                  </div>
+                                  <hr class="hr--white">
+
+                                  <div class="grid grid--middle">
+                                      <div class="grid__col">
+
+                                           <h2 class="txt txt--color-white txt--weight-bold">Superhuman Speed</h2>
+                                           <p class="txt txt--color-white">Flip through comics with one hand, scroll on the app with the other – everything on the mobile app is a key issue so you’re in luck if what you hold in your hand matches what’s on your screen.</p>
+                                                                 
+                                       </div>
+                                       <div class="grid__col">
+                                          <div class="wrapper__phone">
+                                              <img class="img" src="assets/images/superHuman_phone.png" alt="Superhuman Speed">
+                  
+                                            </div>
+                                       </div>
+ 
+                                  </div>
+                                  <hr class="hr--white">
+
+                                  <div class="grid grid--middle">
+                                      <div class="grid__col">
+                                          <h2 class="txt txt--color-white txt--weight-bold">Legendary Collection</h2>
+                                          <p class="txt txt--color-white">Catalogue the issues you own and compile a wishlist for the isues you want.  Check back at any time by tapping “My Keys” to see if market changes have affected your investment.</p>
+                                                                 
+                                       </div>
+                                       <div class="grid__col">
+                                          <div class="wrapper__phone">
+                                              <img class="img" src="assets/images/legendary_phone.png" alt="Search Screen">
+                  
+                                            </div>
+                                       </div>
+ 
+                                  </div>
+
+
+                            </div>
 
                         </div>
-                        <div class="item--main">
-                            <img class="img" src="assets/images/searchScreen_phone.png" alt="Search Screen">
-                        </div>
-                    </div>
-                    -->
-                </div>
+
+               </div>
+
+
+               <!-- End Mobile View -->
+
              </section>
 
           <!-- START CONTACT FORM -->
              <section id="section--3">
               <div class="wrapper">
-                  <h2 class="txt  txt--size-36  txt--color-brand--6 txt--weight-bold vr">We would love to hear
-                      from you!</h2>
-                    
+                  <h2 class="txt  txt--size-36  txt--color-brand--6 txt--weight-bold vr">Give Us a Shout!</h2>
+                    <p>Did we miss a key issue? Contact us through the app by tapping "My Account" or send us an email directly to <a href="mailto:feedback@keycollectorcomics.com?subject=KeyCollector App Feedback">feedback@keycollectorcomics.com</a> to submit your claim. If approved, we'll give you a Discovery Shout Out under that entry.</p>
                       <form id="ajax-contact" method="post" action="mailer.php">
                         <div class="grid">
                           <div class="grid__col grid__col--6of12">
@@ -374,9 +478,15 @@
     <script src="assets/scripts/app.min.js"></script>
     <script src="assets/scripts/contactForm.js"></script>
     <script src="assets/scripts/global-header.plugin.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/kc_app.js"></script>
     <!-- Scripts go here -->
-    <script>
-      function scrollPage(clickTarget, clickOffset) {
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        
+
+        function scrollPage(clickTarget, clickOffset) {
         $target = ($(clickTarget));
         var targetPosition = $target.position().top;
         //targetPosition=Math.floor(targetPosition);
@@ -387,11 +497,18 @@
 
       }
 
+
       $('.nav--inpage--item').on('click', function () {
         var thisTarget = $(this).data('target').split('|');
         scrollPage(thisTarget[0], thisTarget[1]);
 
-      })
+      });
+       
+      });
+    </script>
+    <script>
+
+   
     </script>
 </body>
 
